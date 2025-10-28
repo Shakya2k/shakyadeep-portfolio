@@ -1,0 +1,109 @@
+====================================
+DEPLOYMENT STEPS FOR YOUR PORTFOLIO
+====================================
+
+STEP 2A: Initialize Git (if not done)
+--------------------------------------
+cd /app/portfolio
+git init
+git add .
+git commit -m "Initial commit: Shakyadeep Bhattacharyya Portfolio"
+
+STEP 2B: Create GitHub Repository
+----------------------------------
+1. Go to: https://github.com/new
+2. Repository name: shakyadeep-portfolio (or any name you prefer)
+3. Make it Public or Private
+4. DO NOT initialize with README (we already have files)
+5. Click "Create repository"
+
+STEP 2C: Push to GitHub
+------------------------
+After creating the repo, GitHub will show you commands. Use these:
+
+git remote add origin https://github.com/YOUR_USERNAME/shakyadeep-portfolio.git
+git branch -M main
+git push -u origin main
+
+Replace YOUR_USERNAME with your actual GitHub username.
+
+====================================
+STEP 3: DEPLOY TO VERCEL
+====================================
+
+Option A: Via Vercel Dashboard (EASIEST - RECOMMENDED)
+-------------------------------------------------------
+1. Go to: https://vercel.com/new
+2. Sign in with GitHub
+3. Click "Import Git Repository"
+4. Select your "shakyadeep-portfolio" repository
+5. Click "Import"
+6. On the configuration screen:
+   - Framework Preset: Next.js (auto-detected)
+   - Root Directory: ./ (default)
+   - Build Command: yarn build (auto-filled)
+   
+7. Click "Environment Variables" and add:
+   Name: NEXT_PUBLIC_FORMS_ENDPOINT
+   Value: [Paste your Formspree endpoint from Step 1]
+
+8. Click "Deploy"
+9. Wait 2-3 minutes for build to complete
+10. Your site is LIVE! 🎉
+
+Your URL will be: https://shakyadeep-portfolio.vercel.app
+
+====================================
+
+Option B: Via Vercel CLI (Advanced)
+------------------------------------
+# Install Vercel CLI
+npm i -g vercel
+
+# Login
+vercel login
+
+# Deploy
+cd /app/portfolio
+vercel
+
+# Follow the prompts, then add environment variable:
+vercel env add NEXT_PUBLIC_FORMS_ENDPOINT
+
+# Deploy to production
+vercel --prod
+
+====================================
+POST-DEPLOYMENT CHECKLIST
+====================================
+
+1. Visit your live site
+2. Test the contact form
+3. Check all pages load correctly
+4. Test on mobile (use Chrome DevTools)
+5. Share your portfolio! 🎊
+
+====================================
+OPTIONAL: Add Custom Domain
+====================================
+
+1. In Vercel Dashboard → Settings → Domains
+2. Add your domain (e.g., shakyadeep.com)
+3. Follow DNS configuration instructions
+4. Update sitemap.xml with your actual domain
+
+====================================
+YOUR PORTFOLIO FILES LOCATION
+====================================
+
+Portfolio directory: /app/portfolio
+
+To update content after deployment:
+1. Edit files in /app/portfolio
+2. git add .
+3. git commit -m "Update content"
+4. git push origin main
+
+Vercel automatically rebuilds and deploys!
+
+====================================
