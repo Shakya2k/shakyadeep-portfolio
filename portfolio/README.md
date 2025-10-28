@@ -295,9 +295,9 @@ portfolio/
 
 For issues or questions:
 
-- 🐛 Open an issue on GitHub
-- 📧 Contact via the portfolio contact form
-- 👤 LinkedIn: [linkedin.com/in/shakyadeep](https://linkedin.com/in/shakyadeep)
+- 📞 Contact via the portfolio contact form
+- 💼 LinkedIn: [linkedin.com/in/shakyadeep](https://linkedin.com/in/shakyadeep)
+- 💻 GitHub: [github.com/Shakya2k](https://github.com/Shakya2k)
 
 ## 📜 License
 
