@@ -1,0 +1,53 @@
+[
+  {
+    "id": "cognizant",
+    "company": "Cognizant Technology Solutions",
+    "role": "Data Analyst",
+    "department": "Enterprise Solutions Division",
+    "type": "Professional",
+    "startDate": "2019",
+    "endDate": "2021",
+    "logo": "/images/EDIT_ME/logo-cognizant.png",
+    "description": "Delivered data-automation solutions and KPI dashboards for enterprise clients",
+    "highlights": [
+      "Delivered data-automation solutions cutting manual effort by 35%",
+      "Built KPI dashboards for operational metrics in Tableau & Power BI",
+      "Partnered with cross-functional teams on pricing & efficiency analytics",
+      "Managed stakeholder communication for 5+ concurrent analytics projects"
+    ]
+  },
+  {
+    "id": "simon-vision",
+    "company": "Simon Vision Consulting",
+    "role": "Data Analytics Consultant",
+    "department": "University of Rochester",
+    "type": "Consulting",
+    "startDate": "2024",
+    "endDate": "Present",
+    "logo": "/images/EDIT_ME/logo-simon-vision.png",
+    "description": "Consulted for nonprofits & SMBs on data strategy and forecasting",
+    "highlights": [
+      "Consulted for nonprofits & SMBs on data strategy & forecasting",
+      "Delivered insights that reduced churn & improved fundraising efficiency by 15%",
+      "Designed pricing experiments and causal inference frameworks",
+      "Presented actionable recommendations to C-suite executives"
+    ]
+  },
+  {
+    "id": "iem-research",
+    "company": "Institute of Engineering & Management (IEM)",
+    "role": "Research Associate",
+    "department": "Machine Learning Lab",
+    "type": "Professional / Academic",
+    "startDate": "2018",
+    "endDate": "2019",
+    "logo": "/images/EDIT_ME/logo-iem.png",
+    "description": "Co-developed predictive models on student retention and academic performance",
+    "highlights": [
+      "Co-developed predictive models on student retention & academic performance",
+      "Published internal white paper on AI-driven curriculum analysis",
+      "Mentored undergraduate students on ML projects",
+      "Built data pipelines for academic research data collection"
+    ]
+  }
+]
