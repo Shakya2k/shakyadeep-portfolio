@@ -1,0 +1,70 @@
+[
+  {
+    "id": "simon-gta",
+    "company": "University of Rochester – Simon Business School",
+    "role": "Graduate Teaching Assistant (Analytics)",
+    "department": "MS in Business Analytics Program",
+    "type": "Academic",
+    "startDate": "Jan 2025",
+    "endDate": "Present",
+    "logo": "/images/EDIT_ME/logo-simon.png",
+    "description": "Supported core analytics coursework for 100+ MSBA students through teaching, mentoring, and evaluation.",
+    "highlights": [
+      "Boosted student performance by 30% via SQL, Python, and pandas tutoring",
+      "Led 3+ review sessions on pricing analytics, elasticity, and game theory",
+      "Resolved 10+ weekly technical queries in Python and SQL",
+      "Graded 100+ submissions ensuring fair and consistent evaluation"
+    ]
+  },
+  {
+    "id": "simon-vision",
+    "company": "Simon Vision Consulting",
+    "role": "Data Analytics Consultant",
+    "department": "University of Rochester",
+    "type": "Consulting",
+    "startDate": "Oct 2024",
+    "endDate": "Dec 2024",
+    "logo": "/images/EDIT_ME/logo-simon-vision.png",
+    "description": "Consulted for nonprofits & SMBs on data strategy and forecasting",
+    "highlights": [
+      "Consulted for nonprofits & SMBs on data strategy & forecasting",
+      "Delivered insights that reduced churn & improved fundraising efficiency by 15%",
+      "Designed pricing experiments and causal inference frameworks",
+      "Presented actionable recommendations to C-suite executives"
+    ]
+  },
+  {
+    "id": "cognizant",
+    "company": "Cognizant Technology Solutions",
+    "role": "Data Analyst",
+    "department": "Enterprise Solutions Division",
+    "type": "Professional",
+    "startDate": "Feb 2022",
+    "endDate": "Jun 2024",
+    "logo": "/images/EDIT_ME/logo-cognizant.png",
+    "description": "Delivered data-automation solutions and KPI dashboards for enterprise clients",
+    "highlights": [
+      "Delivered data-automation solutions cutting manual effort by 35%",
+      "Built KPI dashboards for operational metrics in Tableau & Power BI",
+      "Partnered with cross-functional teams on pricing & efficiency analytics",
+      "Managed stakeholder communication for 5+ concurrent analytics projects"
+    ]
+  },
+  {
+    "id": "iem-research",
+    "company": "Institute of Engineering & Management (IEM)",
+    "role": "Research Associate",
+    "department": "Machine Learning Lab",
+    "type": "Professional / Academic",
+    "startDate": "Feb 2019",
+    "endDate": "Dec 2021",
+    "logo": "/images/EDIT_ME/logo-iem.png",
+    "description": "Co-developed predictive models on student retention and academic performance",
+    "highlights": [
+      "Co-developed predictive models on student retention & academic performance",
+      "Published internal white paper on AI-driven curriculum analysis",
+      "Mentored undergraduate students on ML projects",
+      "Built data pipelines for academic research data collection"
+    ]
+  }
+]
