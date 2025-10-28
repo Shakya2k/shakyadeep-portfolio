@@ -4,16 +4,27 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Briefcase, Lightbulb, Target, Code, TrendingUp } from "lucide-react";
-import { notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 import projectsData from "@/content/projects.json";
-import { use } from "react";
 
-export default function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const resolvedParams = use(params);
-  const project = projectsData.find((p) => p.id === resolvedParams.slug);
+export default function ProjectDetail() {
+  const params = useParams();
+  const project = projectsData.find((p) => p.id === params.slug);
 
   if (!project) {
-    notFound();
+    return (
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
+          <Link
+            href="/projects"
+            className="text-primary hover:underline"
+          >
+            ← Back to Projects
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
