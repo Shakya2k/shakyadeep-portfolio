@@ -190,31 +190,25 @@ export default function SkillsGame() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: skill.id * 0.05 }}
               onClick={() => handleCardClick(skill.id)}
-              className="aspect-square cursor-pointer"
+              className="aspect-square cursor-pointer card-flip-container"
             >
               <div
-                className={`relative w-full h-full transition-all duration-500 transform-style-3d ${
-                  skill.isFlipped || skill.isMatched ? "rotate-y-180" : ""
+                className={`card-flip-inner ${
+                  skill.isFlipped || skill.isMatched ? "flipped" : ""
                 }`}
-                style={{ transformStyle: "preserve-3d" }}
               >
                 {/* Card Back */}
-                <div
-                  className="absolute inset-0 bg-card border-2 border-border rounded-lg flex items-center justify-center backface-hidden"
-                  style={{ backfaceVisibility: "hidden" }}
-                >
+                <div className="card-face card-face-back bg-card border-2 border-border rounded-lg flex items-center justify-center">
                   <div className="text-4xl">?</div>
                 </div>
 
                 {/* Card Front */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(
+                  className={`card-face card-face-front bg-gradient-to-br ${getCategoryColor(
                     skill.category
-                  )} border-2 ${skill.isMatched ? "border-primary" : "border-transparent"} rounded-lg p-4 flex flex-col items-center justify-center backface-hidden rotate-y-180`}
-                  style={{
-                    backfaceVisibility: "hidden",
-                    transform: "rotateY(180deg)",
-                  }}
+                  )} border-2 ${
+                    skill.isMatched ? "border-primary" : "border-transparent"
+                  } rounded-lg p-4 flex flex-col items-center justify-center`}
                 >
                   <div className="text-sm font-bold text-center mb-2">
                     {skill.name}
