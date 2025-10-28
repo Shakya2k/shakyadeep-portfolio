@@ -267,7 +267,10 @@ export default function Home() {
                     Simon Business School, University of Rochester
                   </p>
                   <p className="text-foreground/60 text-sm">
-                    3.87 GPA • Dean's List
+                    3.9 GPA • Dean's List
+                  </p>
+                  <p className="text-foreground/60 text-sm">
+                    Advanced Certificate in Pricing
                   </p>
                 </div>
               </div>
