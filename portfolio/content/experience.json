@@ -1,6 +1,5 @@
 [
   {
-<<<<<<< HEAD
     "id": "simon-gta",
     "company": "University of Rochester – Simon Business School",
     "role": "Graduate Teaching Assistant (Analytics)",
@@ -10,17 +9,6 @@
     "endDate": "Present",
     "logo": "/images/EDIT_ME/logo-simon.png",
     "description": "Supported core analytics coursework for 100+ MSBA students through teaching, mentoring, and evaluation.",
-=======
-    "id": "cognizant",
-    "company": "Cognizant Technology Solutions",
-    "role": "Data Analyst",
-    "department": "Enterprise Solutions Division",
-    "type": "Professional",
-    "startDate": "Sep 2022",
-    "endDate": "Jun 2024",
-    "logo": "/images/EDIT_ME/logo-cognizant.png",
-    "description": "Delivered data-automation solutions and KPI dashboards for enterprise clients",
->>>>>>> 219d3575815596df9a0622b2370927a4a938eb2f
     "highlights": [
       "Boosted student performance by 30% via SQL, Python, and pandas tutoring",
       "Led 3+ review sessions on pricing analytics, elasticity, and game theory",
