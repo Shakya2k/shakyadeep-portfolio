@@ -44,6 +44,7 @@ export default function Home() {
                   src="/images/EDIT_ME/profile.jpg"
                   alt="Shakyadeep Bhattacharyya"
                   fill
+                  sizes="256px"
                   className="object-cover"
                   priority
                 />
