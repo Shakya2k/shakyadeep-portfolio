@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   description: "From data chaos to business clarity. Turning analytics into measurable growth. Specializing in Pricing, Experimentation, and Strategic Insights.",
   keywords: ["Data Science", "Analytics", "Pricing", "A/B Testing", "Machine Learning", "Business Intelligence"],
   authors: [{ name: "Shakyadeep Bhattacharyya" }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: "Shakyadeep Bhattacharyya | Data Scientist",
     description: "Turning analytics into measurable growth",
