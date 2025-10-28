@@ -293,6 +293,9 @@ export default function Home() {
                   <p className="text-foreground/60 text-sm">
                     Computer Science & Engineering
                   </p>
+                  <p className="text-foreground/60 text-sm">
+                    Director's Award for Outstanding Performance
+                  </p>
                 </div>
               </div>
             </div>
