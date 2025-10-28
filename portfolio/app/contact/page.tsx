@@ -242,7 +242,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://github.com/shakyadeep"
+                    href="https://github.com/Shakya2k"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 text-foreground/80 hover:text-primary transition-colors group"
@@ -253,7 +253,7 @@ export default function Contact() {
                     <div>
                       <div className="font-semibold">GitHub</div>
                       <div className="text-sm text-foreground/60">
-                        @shakyadeep
+                        @Shakya2k
                       </div>
                     </div>
                   </a>
