@@ -63,7 +63,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/shakyadeep"
+                href="https://github.com/Shakya2k"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
