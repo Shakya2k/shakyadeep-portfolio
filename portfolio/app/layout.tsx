@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.Node;
+  children: React.ReactNode;
 }>) {
   const cfToken = process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN;
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
