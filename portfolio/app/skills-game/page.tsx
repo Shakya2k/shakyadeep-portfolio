@@ -13,18 +13,29 @@ interface Skill {
 }
 
 const skillsData = [
+  // 10 Technical Skills
   { name: "SQL", category: "Tech" },
   { name: "Python", category: "Tech" },
   { name: "Tableau", category: "Tech" },
   { name: "Power BI", category: "Tech" },
   { name: "AWS", category: "Tech" },
   { name: "Azure", category: "Tech" },
+  { name: "R", category: "Tech" },
+  { name: "scikit-learn", category: "Tech" },
+  { name: "TensorFlow", category: "Tech" },
+  { name: "XGBoost", category: "Tech" },
+  // 6 Analytics Skills
   { name: "Pricing Analytics", category: "Analytics" },
   { name: "A/B Testing", category: "Analytics" },
   { name: "Forecasting", category: "Analytics" },
+  { name: "Causal Inference", category: "Analytics" },
+  { name: "Customer Segmentation", category: "Analytics" },
+  { name: "Fraud Detection", category: "Analytics" },
+  // 4 Soft Skills
   { name: "Storytelling", category: "Soft Skills" },
   { name: "Leadership", category: "Soft Skills" },
   { name: "Stakeholder Mgmt", category: "Soft Skills" },
+  { name: "Presentation", category: "Soft Skills" },
 ];
 
 export default function SkillsGame() {
