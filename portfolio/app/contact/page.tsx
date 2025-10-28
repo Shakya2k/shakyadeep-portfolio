@@ -34,23 +34,27 @@ export default function Contact() {
     setSubmitError("");
 
     try {
-      const endpoint = process.env.NEXT_PUBLIC_FORMS_ENDPOINT;
+      const accessKey = process.env.NEXT_PUBLIC_FORMS_ENDPOINT;
 
-      if (!endpoint || endpoint.includes("YOUR_FORM_ID")) {
+      if (!accessKey || accessKey.includes("YOUR_FORM_ID")) {
         throw new Error(
-          "Form endpoint not configured. Please set NEXT_PUBLIC_FORMS_ENDPOINT in .env.local"
+          "Form access key not configured. Please set NEXT_PUBLIC_FORMS_ENDPOINT in .env.local"
         );
       }
 
-      const response = await fetch(endpoint, {
+      // Web3Forms API endpoint
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify({
+          access_key: accessKey,
           name: formData.name,
           email: formData.email,
           message: formData.message,
+          subject: "New Portfolio Contact Form Submission",
         }),
       });
 
