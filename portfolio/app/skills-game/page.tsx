@@ -221,10 +221,10 @@ export default function SkillsGame() {
                     skill.isMatched ? "border-primary" : "border-transparent"
                   } rounded-lg p-4 flex flex-col items-center justify-center`}
                 >
-                  <div className="text-sm font-bold text-center mb-2">
+                  <div className="text-base font-extrabold text-center mb-2">
                     {skill.name}
                   </div>
-                  <div className="text-xs opacity-80">{skill.category}</div>
+                  <div className="text-sm font-semibold opacity-90">{skill.category}</div>
                 </div>
               </div>
             </motion.div>
