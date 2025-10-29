@@ -166,33 +166,35 @@ export default function Home() {
                 <SkillBar
                   key={skill.name}
                   skill={skill.name}
-                  percentage={skill.percentage}
+                  years={skill.years}
                   color={skill.color}
                 />
               ))}
             </div>
 
             <div className="space-y-6">
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all group">
                 <h3 className="text-xl font-semibold mb-3 text-primary">
                   Technical Stack
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Python",
+                    "Python (pandas, NumPy, scikit-learn, matplotlib)",
                     "SQL",
-                    "R",
+                    "Excel",
                     "Tableau",
                     "Power BI",
-                    "AWS",
-                    "Azure",
-                    "scikit-learn",
-                    "TensorFlow",
-                    "XGBoost",
+                    "Snowflake",
+                    "Azure Data Factory",
+                    "Git",
+                    "APIs",
+                    "Streamlit",
+                    "MLflow",
+                    "NLP",
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-background text-sm rounded-full border border-primary/30 text-foreground/80"
+                      className="px-3 py-1 bg-background text-sm rounded-full border border-primary/30 text-foreground/80 hover:border-primary hover:shadow-[0_0_10px_rgba(74,222,128,0.3)] transition-all cursor-default"
                     >
                       {tech}
                     </span>
@@ -200,22 +202,24 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-secondary/50 transition-all">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-secondary/50 transition-all group">
                 <h3 className="text-xl font-semibold mb-3 text-secondary">
                   Domain Expertise
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Pricing Analytics",
-                    "A/B Testing",
-                    "Causal Inference",
-                    "Forecasting",
-                    "Customer Segmentation",
-                    "Fraud Detection",
+                    "Pricing & Revenue Optimization",
+                    "Marketing & Customer Analytics",
+                    "Financial Forecasting",
+                    "Product Experimentation",
+                    "Risk Analytics",
+                    "Data Engineering",
+                    "Business Intelligence",
+                    "ETL Pipelines",
                   ].map((domain) => (
                     <span
                       key={domain}
-                      className="px-3 py-1 bg-background text-sm rounded-full border border-secondary/30 text-foreground/80"
+                      className="px-3 py-1 bg-background text-sm rounded-full border border-secondary/30 text-foreground/80 hover:border-secondary hover:shadow-[0_0_10px_rgba(96,165,250,0.3)] transition-all cursor-default"
                     >
                       {domain}
                     </span>
@@ -223,20 +227,23 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-all">
+              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-all group">
                 <h3 className="text-xl font-semibold mb-3 text-accent">
                   Soft Skills
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Storytelling",
-                    "Stakeholder Management",
+                    "Analytical Storytelling",
+                    "Stakeholder Communication",
                     "Leadership",
-                    "Presentation",
+                    "Problem Solving",
+                    "Teaching & Mentoring",
+                    "Time Management",
+                    "Cross-Functional Collaboration",
                   ].map((soft) => (
                     <span
                       key={soft}
-                      className="px-3 py-1 bg-background text-sm rounded-full border border-accent/30 text-foreground/80"
+                      className="px-3 py-1 bg-background text-sm rounded-full border border-accent/30 text-foreground/80 hover:border-accent hover:shadow-[0_0_10px_rgba(155,93,229,0.3)] transition-all cursor-default"
                     >
                       {soft}
                     </span>
