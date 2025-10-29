@@ -340,7 +340,7 @@ export default function Home() {
             I turn messy data into actionable insights that help businesses
             <br />
             <span className="gradient-text">
-              cut costs, grow revenue, and make smarter decisions — fast.
+              cut costs, grow revenue, and make smarter decisions, FAST.
             </span>
           </h2>
 
