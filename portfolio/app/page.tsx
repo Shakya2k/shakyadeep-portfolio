@@ -38,6 +38,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center lg:text-left"
           >
             <div className="relative w-64 h-64 mx-auto lg:mx-0 mb-8">
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-full blur-2xl opacity-30 animate-pulse"></div>
