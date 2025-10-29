@@ -202,13 +202,8 @@ export default function Experience() {
 
                           {/* Key Impact */}
                           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/30 rounded-lg p-4">
-                            <div className="text-lg font-semibold flex items-center gap-2">
-                              <span className="theme-emoji text-2xl">
-                                {exp.keyImpact.match(/^[\p{Emoji}]+/u)?.[0] || ""}
-                              </span>
-                              <span className="text-primary">
-                                {exp.keyImpact.replace(/^[\p{Emoji}\s]+/u, "")}
-                              </span>
+                            <div className="text-lg font-semibold text-primary">
+                              {exp.keyImpact}
                             </div>
                           </div>
                         </div>
