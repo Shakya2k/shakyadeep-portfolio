@@ -114,8 +114,12 @@ export default function Home() {
                 delay={0}
               />
               <KPICard
-                title="Experiments Shipped"
-                value={<CountUp end={24} />}
+                title="Projects Delivered"
+                value={
+                  <>
+                    <CountUp end={25} />+
+                  </>
+                }
                 icon={<Target size={32} />}
                 delay={0.1}
               />
