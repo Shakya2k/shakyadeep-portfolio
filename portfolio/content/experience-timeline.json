@@ -71,23 +71,24 @@
       }
     ],
     "keySkills": ["SQL", "Python", "Snowflake", "ETL", "Tableau", "Forecasting"],
-    "keyImpact": "💰 Delivered $30M+ validated cost savings and cut report cycle time by 40%."
+    "keyImpact": "💰 $30M+ validated cost savings & 40% report cycle time reduced"
   },
   {
-    "id": "iem-iedc",
+    "id": "iem-mlresearch",
     "company": "IEM - Innovation & Entrepreneurship Development Cell",
     "logo": "/images/EDIT_ME/logo-iem.png",
-    "title": "Head of Accounts - Student Festival",
-    "department": "Finance & Operations",
+    "title": "Machine Learning Research Associate",
+    "department": "Applied AI & Data Science",
     "location": "Kolkata, India",
-    "dates": "Jan 2019 - Mar 2020",
-    "headline": "Directed financial operations for a 200+ person student event.",
+    "dates": "Feb 2019 - Dec 2021",
+    "headline": "Researched predictive analytics and computer vision models for startup projects.",
     "bullets": [
-      "Managed $15K budget and negotiated vendor contracts saving 12% cost overall.",
-      "Supervised payment audits and cash reconciliations ensuring 100% compliance.",
-      "Led cross-team coordination during festival to resolve finance and logistics issues in real time."
+      "Built and trained supervised learning models using scikit-learn and TensorFlow to forecast consumer trends with 87% accuracy.",
+      "Engineered a computer vision pipeline that classified manufacturing defects with 92% precision, later adopted by two partner startups.",
+      "Led a cross-functional team of 5 researchers to prototype scalable ML workflows for early-stage ventures.",
+      "Improved model accuracy 25% on 100K+ records (TensorFlow/scikit-learn); conducted 10+ analytics workshops for 1,000+ learners on SQL/Python/Tableau. "
     ],
-    "keySkills": ["Leadership", "Budgeting", "Excel", "Vendor Negotiation", "Event Management", "Financial Control"],
-    "keyImpact": "✅ Executed largest campus event under budget by 12% with zero audit flags."
+    "keySkills": ["Machine Learning", "Python", "TensorFlow", "Computer Vision", "Research", "Data Modeling"],
+    "keyImpact": "🤖 Deployed 2 ML prototypes adopted by startups"
   }
 ]
