@@ -5,18 +5,22 @@ import { useEffect, useRef, useState } from "react";
 
 interface SkillBarProps {
   skill: string;
-  percentage: number;
+  years: number;
   color?: string;
 }
 
 export default function SkillBar({
   skill,
-  percentage,
+  years,
   color = "#4ade80",
 }: SkillBarProps) {
   const [width, setWidth] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  
+  // Calculate percentage based on max 7 years
+  const maxYears = 7;
+  const percentage = (years / maxYears) * 100;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,12 +44,14 @@ export default function SkillBar({
     <div ref={ref} className="mb-6">
       <div className="flex justify-between mb-2">
         <span className="text-sm font-medium text-foreground">{skill}</span>
-        <span className="text-sm font-mono text-foreground/60">{percentage}%</span>
+        <span className="text-sm font-mono text-foreground/60">{years} yrs</span>
       </div>
       <div className="h-2 bg-card rounded-full overflow-hidden">
         <motion.div
           className="h-full rounded-full"
-          style={{ backgroundColor: color }}
+          style={{ 
+            background: `linear-gradient(90deg, ${color}, ${color}dd)`,
+          }}
           initial={{ width: 0 }}
           animate={{ width: `${width}%` }}
           transition={{ duration: 1, ease: "easeOut" }}
