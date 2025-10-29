@@ -119,7 +119,7 @@ export default function SkillsGame() {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Tech":
-        return "from-gray-800 to-gray-900";
+        return "from-slate-800 to-blue-950";
       case "Analytics":
         return "from-secondary to-secondary-dark";
       case "Soft Skills":
