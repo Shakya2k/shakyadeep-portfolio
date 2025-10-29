@@ -270,8 +270,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-lg p-6 hover:border-secondary/50 transition-all">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl font-bold text-secondary">MS</span>
+                <div className="w-16 h-16 bg-background border border-border rounded-lg flex items-center justify-center flex-shrink-0 p-2">
+                  <Image
+                    src="/images/EDIT_ME/logo-simon.png"
+                    alt="Simon Business School"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">
@@ -292,10 +298,14 @@ export default function Home() {
 
             <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl font-bold text-primary">
-                    B.Tech
-                  </span>
+                <div className="w-16 h-16 bg-background border border-border rounded-lg flex items-center justify-center flex-shrink-0 p-2">
+                  <Image
+                    src="/images/EDIT_ME/logo-iem.png"
+                    alt="IEM Kolkata"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">
