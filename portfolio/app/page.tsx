@@ -16,13 +16,16 @@ import SkillBar from "@/components/SkillBar";
 
 export default function Home() {
   const skills = [
-    { name: "SQL", percentage: 92, color: "#4ade80" },
-    { name: "Python", percentage: 90, color: "#60a5fa" },
-    { name: "Pricing Analytics", percentage: 88, color: "#9b5de5" },
-    { name: "Experimentation", percentage: 84, color: "#4ade80" },
-    { name: "Causal Inference", percentage: 82, color: "#60a5fa" },
-    { name: "Dashboarding", percentage: 86, color: "#9b5de5" },
-    { name: "Communication", percentage: 90, color: "#4ade80" },
+    { name: "Python", years: 7, color: "#4ade80" },
+    { name: "SQL", years: 7, color: "#60a5fa" },
+    { name: "Excel", years: 7, color: "#9b5de5" },
+    { name: "Statistics & Experimentation", years: 5, color: "#4ade80" },
+    { name: "Business Strategy", years: 4, color: "#60a5fa" },
+    { name: "Data Storytelling", years: 4, color: "#9b5de5" },
+    { name: "Machine Learning", years: 4, color: "#4ade80" },
+    { name: "Tableau", years: 3, color: "#60a5fa" },
+    { name: "Power BI", years: 1, color: "#9b5de5" },
+    { name: "Pricing Analytics", years: 1, color: "#4ade80" },
   ];
 
   return (
