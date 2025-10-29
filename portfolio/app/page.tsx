@@ -153,6 +153,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="text-center lg:text-left"
         >
           <h2 className="text-3xl font-bold mb-2 font-mono">
             Core <span className="text-primary">Competencies</span>
