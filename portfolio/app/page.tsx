@@ -65,7 +65,7 @@ export default function Home() {
               Turning analytics into measurable growth.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link
                 href="/projects"
                 className="px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-all hover:scale-105"
