@@ -74,6 +74,13 @@ body {
   box-shadow: 0 0 20px rgba(155, 93, 229, 0.3);
 }
 
+/* Theme emoji styling - grayscale with neon glow */
+.theme-emoji {
+  filter: grayscale(1);
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+  display: inline-block;
+}
+
 /* 3D Card Flip Styles */
 .card-flip-container {
   perspective: 1000px;
