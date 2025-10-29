@@ -173,9 +173,10 @@ export default function Experience() {
                                   key={idx}
                                   className="flex items-start gap-3 text-foreground/80"
                                 >
-                                  <span className="text-primary mt-1.5 flex-shrink-0">
-                                    •
-                                  </span>
+                                  <Briefcase
+                                    size={16}
+                                    className="text-primary mt-1 flex-shrink-0"
+                                  />
                                   <span>{bullet}</span>
                                 </li>
                               ))}
