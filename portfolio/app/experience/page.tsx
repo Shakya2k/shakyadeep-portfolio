@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Download, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { Download, MapPin, ChevronDown, ChevronUp, Briefcase } from "lucide-react";
 import experienceData from "@/content/experience-timeline.json";
 
 export default function Experience() {
