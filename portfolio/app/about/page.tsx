@@ -66,7 +66,7 @@ export default function About() {
             precision.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            I believe analytics should drive clarity, not complexity — that's how
+            I believe analytics should drive clarity, not complexity. That's how
             I turn data into decisions that actually move the needle.
           </p>
         </motion.div>
