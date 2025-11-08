@@ -53,6 +53,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        {/* Apollo Tracking Script */}
+        <Script id="apollo-tracker" strategy="afterInteractive">
+          {`
+            function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+            o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+            o.onload=function(){window.trackingFunctions.onLoad({appId:"687f66d30936470021de1d3c"})},
+            document.head.appendChild(o)}initApollo();
+          `}
+        </Script>
+
         {cfToken && (
           <Script
             defer
