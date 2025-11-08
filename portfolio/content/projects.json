@@ -88,5 +88,21 @@
     "resultBusiness": "Portfolio stability increased by 15%. Reduced drawdowns during high-volatility periods by 22%.",
     "resultTech": "Achieved MSE < 0.05 on test set. Successfully automated end-to-end pipeline with 99% job success rate.",
     "tags": ["Deep Learning", "LSTM", "Time Series", "Python", "Forecasting"]
-  }
+  },
+  {
+  "id": "navan-ipo-analysis",
+  "title": "NAVAN IPO Analysis",
+  "category": "Personal",
+  "organization": "Independent Market Analysis",
+  "thumbnail": "/images/EDIT_ME/project-navn.png",
+  "shortDescription": "Analysis of NAVAN’s IPO amidst a government shutdown, evaluating if it signals optimism or a broader market correction.",
+  "situation": "In October 2025, corporate travel platform Navan (formerly TripActions) went public on Nasdaq while U.S. IPO activity was constrained by an SEC slowdown during the government shutdown. The IPO tested investor sentiment in a tightening liquidity environment.",
+  "task": "Analyze the NAVAN IPO to determine whether it represents renewed market optimism or a continuation of valuation compression for growth technology firms.",
+  "actionNonTech": "Applied consulting frameworks to assess macroeconomic context, investor risk appetite, and market liquidity trends. Compared 2025 IPO activity against previous years to position Navan’s listing as a high-signal event in a constrained window.",
+  "actionTech": "Compiled authentic financial and IPO market data (S&P Global, Nasdaq, EY, Reuters). Modeled revenue and valuation scenarios using Python and Excel. Built a 10-slide visualization deck incorporating financial metrics, consulting logic, and economic interpretation.",
+  "resultBusiness": "Identified that NAVAN’s listing reflects disciplined market reopening rather than speculative optimism, highlighting investors’ shift toward operational efficiency over pure growth. Provided actionable insights for founders, investors, and analysts on 2025 IPO valuation dynamics.",
+  "resultTech": "Delivered a data-verified presentation integrating authentic IPO statistics, growth-to-valuation modeling, and multi-scenario revenue forecasting.",
+  "tags": ["Financial Analysis", "Consulting", "IPO Strategy", "Python", "Valuation Modeling", "Economic Analysis", "Data Visualization"]
+}
+
 ]
