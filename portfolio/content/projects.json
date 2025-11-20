@@ -1,5 +1,20 @@
 [
   {
+  "id": "perrys-icecream-analytics",
+  "title": "Production Quality & Process Optimization",
+  "category": "Consulting",
+  "organization": "Perry’s Ice Cream",
+  "thumbnail": "/images/EDIT_ME/project-perrys.png",
+  "shortDescription": "End-to-end analytics consulting project for Perry’s Ice Cream to enhance production quality, reduce fill-weight variance, and improve line stability using data-driven insights.",
+  "situation": "Perry’s Ice Cream wanted to investigate production-line variability and product weight inconsistencies across its manufacturing network. Each WorkCenter produces different package types (pints, tubs, bars), and maintaining fill-weight control is essential for compliance and yield efficiency.",
+  "task": "As project lead, I designed and executed a multi-phase analytics framework to quantify sources of variance, assess temporal stability, and develop actionable insights to improve process control and quality performance across lines.",
+  "actionNonTech": "Led a team-based consulting engagement with Perry’s operations and IT teams. Defined the analytical scope, validated production data with the client, and presented findings to senior management. Developed a statistical control framework to identify stable vs. unstable SKUs, benchmark line capability, and translate findings into process improvement recommendations.",
+  "actionTech": "Engineered a 14M+ record dataset by merging run and checkweight data using temporal joins. Conducted multi-dimensional mean–variance analysis (WorkCenter × SKU × Shift × DayOfWeek), variance decomposition via weighted ANOVA, and process capability analysis (Cp, Cpk). Applied time-series decomposition (STL), autocorrelation, and change-point detection to detect drift and instability. Built Python pipelines for EDA, SPC classification, and automated report generation with over 20+ visual diagnostics (heatmaps, control charts, ridge plots, and trend decompositions).",
+  "resultBusiness": "Revealed that over 65% of total variability originated from SKU-level factors, with specific lines (e.g., WC 1201) exhibiting recurrent mean drift and higher instability. Provided Perry’s with a ranked stability report and visual control benchmarks that now guide continuous-improvement discussions and line calibration priorities.",
+  "resultTech": "Delivered 30+ analytical exports, 20+ publication-quality visualizations, and an integrated temporal stability scoring model. Automated data aggregation, reducing manual QA time by 80%. Established a replicable analytical pipeline for future factory performance monitoring.",
+  "tags": ["Python", "Pandas", "Statistical Analysis", "ANOVA", "SPC", "Process Capability", "Time Series Analysis", "Data Visualization", "Manufacturing Analytics", "Quality Engineering"]
+  },
+  {
     "id": "credit-card-optimization",
     "title": "Credit Card Offer Optimization",
     "category": "Academic",
