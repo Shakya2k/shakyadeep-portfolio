@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import {
   Heart,
   ThumbsDown,
@@ -9,6 +10,7 @@ import {
   Mountain,
   Code2,
 } from "lucide-react";
+import { FEATURES } from "@/config/site";
 
 export default function About() {
   const likes = [
