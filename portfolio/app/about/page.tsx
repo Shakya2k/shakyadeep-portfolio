@@ -34,6 +34,42 @@ export default function About() {
     "I've automated my personal finance tracking using Python and it's oddly satisfying.",
   ];
 
+  // Video Introduction - IntersectionObserver for autoplay
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoInView, setIsVideoInView] = useState(false);
+
+  useEffect(() => {
+    if (!FEATURES.introVideoEnabled || !videoRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVideoInView(entry.isIntersecting);
+          
+          if (entry.isIntersecting) {
+            // Play video when in view
+            videoRef.current?.play().catch((err) => {
+              // Silently fail if autoplay is blocked by browser
+              console.log("Autoplay prevented:", err);
+            });
+          } else {
+            // Pause when out of view
+            videoRef.current?.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoRef.current);
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="pt-20 min-h-screen">
       <section className="container mx-auto px-6 py-16">
