@@ -109,6 +109,50 @@ export default function About() {
           </p>
         </motion.div>
 
+        {/* Video Introduction Section - Feature Flagged */}
+        {/* 
+          TO ENABLE THIS VIDEO SECTION:
+          1. Add your video file to: public/videos/intro.mp4
+          2. Go to config/site.ts and set: introVideoEnabled = true
+          3. Redeploy the site
+          
+          The video will autoplay when scrolled into view (if browser allows).
+          Browser autoplay policies may block sound - this is expected behavior.
+        */}
+        {FEATURES.introVideoEnabled && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            id="intro-video"
+            className="mb-12"
+          >
+            <div className="text-center lg:text-left mb-6">
+              <h2 className="text-3xl font-bold mb-2 font-mono">
+                Video <span className="text-primary">Introduction</span>
+              </h2>
+              <p className="text-foreground/60">
+                Get to know me in a quick video walkthrough of my background, work, and how I think about data and business.
+              </p>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/60 transition-all shadow-[0_0_20px_rgba(74,222,128,0.2)] hover:shadow-[0_0_30px_rgba(74,222,128,0.4)]">
+              <video
+                ref={videoRef}
+                src="/videos/intro.mp4"
+                controls
+                loop
+                playsInline
+                className="w-full rounded-2xl"
+                preload="metadata"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </motion.div>
+        )}
+
         {/* Likes & Dislikes Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Likes */}
