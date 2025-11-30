@@ -159,7 +159,7 @@ export function mergeArticleData(
     id: config.id,
     title: config.overrideTitle || metadata.title,
     description: config.overrideDescription || metadata.description,
-    imageUrl: metadata.imageUrl,
+    imageUrl: config.overrideImage || metadata.imageUrl, // Use manual image if provided
     url: metadata.url,
   };
 }
