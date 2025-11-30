@@ -3,12 +3,14 @@
     "id": "example-article-1",
     "mediumUrl": "https://medium.com/@yourhandle/example-article",
     "overrideTitle": null,
-    "overrideDescription": null
+    "overrideDescription": null,
+    "overrideImage": null
   },
   {
     "id": "example-article-2",
     "mediumUrl": "https://medium.com/@yourhandle/another-example",
     "overrideTitle": "Custom Title Override",
-    "overrideDescription": "This description overrides what's scraped from Medium."
+    "overrideDescription": "This description overrides what's scraped from Medium.",
+    "overrideImage": "https://example.com/your-custom-image.jpg"
   }
 ]
