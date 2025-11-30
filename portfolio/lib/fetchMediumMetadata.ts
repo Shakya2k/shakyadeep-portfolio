@@ -26,26 +26,51 @@ export interface ArticleData extends MediumMetadata {
  */
 export async function fetchMediumMetadata(url: string): Promise<MediumMetadata> {
   try {
+    // Add headers to mimic a real browser and avoid bot detection
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; MetadataBot/1.0)',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Cache-Control': 'max-age=0',
       },
+      next: { revalidate: 3600 }, // Cache for 1 hour
     });
 
     if (!response.ok) {
+      console.error(`HTTP error fetching ${url}: ${response.status}`);
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const html = await response.text();
 
-    // Extract Open Graph metadata using regex
-    const title = extractMetaTag(html, 'og:title') || extractMetaTag(html, 'twitter:title') || url;
-    const description = extractMetaTag(html, 'og:description') || extractMetaTag(html, 'twitter:description') || 'View this article on Medium.';
-    const imageUrl = extractMetaTag(html, 'og:image') || extractMetaTag(html, 'twitter:image') || null;
+    // Extract Open Graph metadata with improved regex patterns
+    const title = 
+      extractMetaTag(html, 'og:title') || 
+      extractMetaTag(html, 'twitter:title') ||
+      extractTitleTag(html) ||
+      url;
+      
+    const description = 
+      extractMetaTag(html, 'og:description') || 
+      extractMetaTag(html, 'twitter:description') ||
+      extractMetaTag(html, 'description') ||
+      'View this article on Medium.';
+      
+    const imageUrl = 
+      extractMetaTag(html, 'og:image') || 
+      extractMetaTag(html, 'twitter:image') ||
+      extractMetaTag(html, 'twitter:image:src') ||
+      null;
+
+    console.log(`Fetched metadata for ${url}:`, { title: title.substring(0, 50), hasImage: !!imageUrl });
 
     return {
-      title,
-      description,
+      title: cleanText(title),
+      description: cleanText(description),
       imageUrl,
       url,
     };
@@ -53,8 +78,8 @@ export async function fetchMediumMetadata(url: string): Promise<MediumMetadata> 
     console.error(`Failed to fetch metadata for ${url}:`, error);
     // Graceful fallback
     return {
-      title: url,
-      description: 'View this article on Medium.',
+      title: 'Article on Medium',
+      description: 'Click to read this article on Medium.',
       imageUrl: null,
       url,
     };
@@ -68,20 +93,55 @@ export async function fetchMediumMetadata(url: string): Promise<MediumMetadata> 
  * @returns The content value or null if not found
  */
 function extractMetaTag(html: string, property: string): string | null {
-  // Match both property and name attributes for maximum compatibility
-  const propertyRegex = new RegExp(
-    `<meta[^>]*(?:property|name)=["']${property}["'][^>]*content=["']([^"']*)["']`,
-    'i'
-  );
-  const contentRegex = new RegExp(
-    `<meta[^>]*content=["']([^"']*)["'][^>]*(?:property|name)=["']${property}["']`,
-    'i'
-  );
+  // Try multiple patterns to match different meta tag formats
+  const patterns = [
+    // property="og:title" content="..."
+    new RegExp(`<meta[^>]*property=["']${escapeRegex(property)}["'][^>]*content=["']([^"']*)["']`, 'i'),
+    // content="..." property="og:title"
+    new RegExp(`<meta[^>]*content=["']([^"']*)["'][^>]*property=["']${escapeRegex(property)}["']`, 'i'),
+    // name="og:title" content="..."
+    new RegExp(`<meta[^>]*name=["']${escapeRegex(property)}["'][^>]*content=["']([^"']*)["']`, 'i'),
+    // content="..." name="og:title"
+    new RegExp(`<meta[^>]*content=["']([^"']*)["'][^>]*name=["']${escapeRegex(property)}["']`, 'i'),
+  ];
 
-  const propertyMatch = html.match(propertyRegex);
-  const contentMatch = html.match(contentRegex);
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    if (match && match[1]) {
+      return match[1];
+    }
+  }
 
-  return propertyMatch?.[1] || contentMatch?.[1] || null;
+  return null;
+}
+
+/**
+ * Extract title from <title> tag as fallback
+ */
+function extractTitleTag(html: string): string | null {
+  const match = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+  return match?.[1] || null;
+}
+
+/**
+ * Escape special regex characters
+ */
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Clean extracted text (decode HTML entities, trim whitespace)
+ */
+function cleanText(text: string): string {
+  return text
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .trim();
 }
 
 /**
