@@ -13,6 +13,7 @@ export interface ArticleConfig {
   mediumUrl: string;
   overrideTitle: string | null;
   overrideDescription: string | null;
+  overrideImage?: string | null; // Optional manual image URL
 }
 
 export interface ArticleData extends MediumMetadata {
