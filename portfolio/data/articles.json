@@ -4,8 +4,6 @@
     "mediumUrl": "https://medium.com/@shakyadeepbhattacharyya/breaking-a-saas-monopoly-how-nlp-turns-customer-sentiment-into-a-go-to-market-checkmate-b34c7de6976d",
     "overrideTitle": null,
 <<<<<<< HEAD
-    "overrideDescription": null
-=======
     "overrideDescription": null,
     "overrideImage": null
   },
@@ -15,6 +13,8 @@
     "overrideTitle": "Custom Title Override",
     "overrideDescription": "This description overrides what's scraped from Medium.",
     "overrideImage": "https://example.com/your-custom-image.jpg"
->>>>>>> 38e0dbf (Fix Medium scraping: improved headers, multiple regex patterns, manual override support)
+=======
+    "overrideDescription": null
+>>>>>>> 08f7b3d742be7b69edfeb49de1ec241092a03548
   }
 ]
