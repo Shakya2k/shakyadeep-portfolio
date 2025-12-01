@@ -1,18 +1,29 @@
 import ArticleCard from "@/components/ArticleCard";
-import articlesConfig from "@/data/articles.json";
-import {
-  fetchMediumMetadata,
-  mergeArticleData,
-  type ArticleData,
-} from "@/lib/fetchMediumMetadata";
+import { fetchMediumRSSFeed, type MediumArticle } from "@/lib/fetchMediumRSS";
+
+// Your Medium username (can be moved to config later)
+const MEDIUM_USERNAME = "shakyadeepbhattacharyya";
+
+// Transform MediumArticle to match ArticleData interface
+interface ArticleData {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string | null;
+  url: string;
+}
 
 async function getArticles(): Promise<ArticleData[]> {
-  const articlesPromises = articlesConfig.map(async (config) => {
-    const metadata = await fetchMediumMetadata(config.mediumUrl);
-    return mergeArticleData(config, metadata);
-  });
-
-  return Promise.all(articlesPromises);
+  const articles = await fetchMediumRSSFeed(MEDIUM_USERNAME);
+  
+  // Transform to ArticleData format with generated IDs
+  return articles.map((article, index) => ({
+    id: `article-${index}`,
+    title: article.title,
+    description: article.description,
+    imageUrl: article.imageUrl,
+    url: article.url,
+  }));
 }
 
 export default async function Articles() {
