@@ -103,6 +103,9 @@ export async function fetchMediumRSSFeed(mediumUsername: string): Promise<Medium
       // Extract description from content
       const description = extractPlainTextDescription(contentEncoded);
       
+      console.log(`  📄 Article: ${title.substring(0, 50)}...`);
+      console.log(`  🖼️  Image: ${imageUrl ? 'Found' : 'Not found'} - ${imageUrl?.substring(0, 80) || 'N/A'}`);
+      
       return {
         title,
         description,
