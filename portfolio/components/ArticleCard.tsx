@@ -3,7 +3,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-import type { ArticleData } from "@/lib/fetchMediumMetadata";
+
+interface ArticleData {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string | null;
+  url: string;
+}
 
 interface ArticleCardProps {
   article: ArticleData;
