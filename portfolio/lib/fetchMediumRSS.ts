@@ -27,8 +27,8 @@ function extractFirstImage(htmlContent: string): string | null {
     }
   }
   
-  // Look for <figure> with image
-  const figureMatch = htmlContent.match(/<figure[^>]*>.*?<img[^>]+src=["']([^"']+)["'].*?<\/figure>/is);
+  // Look for <figure> with image (using multiline approach instead of 's' flag for ES2017 compatibility)
+  const figureMatch = htmlContent.match(/<figure[^>]*>[\s\S]*?<img[^>]+src=["']([^"']+)["'][\s\S]*?<\/figure>/i);
   if (figureMatch && figureMatch[1]) {
     return figureMatch[1];
   }
