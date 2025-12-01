@@ -1,6 +1,8 @@
 // Utility to fetch Medium article metadata from server-side
 // This avoids CORS issues by fetching from Node environment
 
+import * as cheerio from 'cheerio';
+
 export interface MediumMetadata {
   title: string;
   description: string;
@@ -27,16 +29,23 @@ export interface ArticleData extends MediumMetadata {
  */
 export async function fetchMediumMetadata(url: string): Promise<MediumMetadata> {
   try {
-    // Add headers to mimic a real browser and avoid bot detection
+    // Add comprehensive headers to mimic a real browser
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'Accept-Language': 'en-US,en;q=0.9',
         'Accept-Encoding': 'gzip, deflate, br',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
         'Cache-Control': 'max-age=0',
+        'sec-ch-ua': '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
       },
       next: { revalidate: 3600 }, // Cache for 1 hour
     });
@@ -48,35 +57,64 @@ export async function fetchMediumMetadata(url: string): Promise<MediumMetadata> 
 
     const html = await response.text();
 
-    // Extract Open Graph metadata with improved regex patterns
-    const title = 
-      extractMetaTag(html, 'og:title') || 
-      extractMetaTag(html, 'twitter:title') ||
-      extractTitleTag(html) ||
-      url;
-      
-    const description = 
-      extractMetaTag(html, 'og:description') || 
-      extractMetaTag(html, 'twitter:description') ||
-      extractMetaTag(html, 'description') ||
-      'View this article on Medium.';
-      
-    const imageUrl = 
-      extractMetaTag(html, 'og:image') || 
-      extractMetaTag(html, 'twitter:image') ||
-      extractMetaTag(html, 'twitter:image:src') ||
+    // Use Cheerio to parse HTML for better reliability
+    const $ = cheerio.load(html);
+
+    // Extract metadata using Cheerio's selectors
+    let title = 
+      $('meta[property="og:title"]').attr('content') ||
+      $('meta[name="twitter:title"]').attr('content') ||
+      $('meta[name="title"]').attr('content') ||
+      $('title').text() ||
+      'Article on Medium';
+
+    let description = 
+      $('meta[property="og:description"]').attr('content') ||
+      $('meta[name="twitter:description"]').attr('content') ||
+      $('meta[name="description"]').attr('content') ||
+      'Click to read this article on Medium.';
+
+    let imageUrl = 
+      $('meta[property="og:image"]').attr('content') ||
+      $('meta[name="twitter:image"]').attr('content') ||
+      $('meta[name="twitter:image:src"]').attr('content') ||
       null;
 
-    console.log(`Fetched metadata for ${url}:`, { title: title.substring(0, 50), hasImage: !!imageUrl });
+    // Fallback: Try regex patterns if Cheerio didn't find anything
+    if (title === 'Article on Medium') {
+      title = extractMetaTag(html, 'og:title') || 
+              extractMetaTag(html, 'twitter:title') ||
+              extractTitleTag(html) ||
+              title;
+    }
+
+    if (description === 'Click to read this article on Medium.') {
+      description = extractMetaTag(html, 'og:description') || 
+                    extractMetaTag(html, 'twitter:description') ||
+                    extractMetaTag(html, 'description') ||
+                    description;
+    }
+
+    if (!imageUrl) {
+      imageUrl = extractMetaTag(html, 'og:image') || 
+                 extractMetaTag(html, 'twitter:image') ||
+                 null;
+    }
+
+    console.log(`✅ Fetched metadata for ${url}:`, { 
+      title: title.substring(0, 60), 
+      hasImage: !!imageUrl,
+      descLength: description.length 
+    });
 
     return {
       title: cleanText(title),
       description: cleanText(description),
-      imageUrl,
+      imageUrl: imageUrl || null,
       url,
     };
   } catch (error) {
-    console.error(`Failed to fetch metadata for ${url}:`, error);
+    console.error(`❌ Failed to fetch metadata for ${url}:`, error);
     // Graceful fallback
     return {
       title: 'Article on Medium',
