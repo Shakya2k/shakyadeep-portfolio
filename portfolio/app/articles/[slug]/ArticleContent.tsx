@@ -110,10 +110,12 @@ export default function ArticleContent({ article, content, relatedArticles }: Ar
             {article.title}
           </h1>
 
-          {/* Description */}
-          <p className="text-xl text-foreground/70 mb-6">
-            {article.description}
-          </p>
+          {/* Subtitle */}
+          {article.subtitle && (
+            <p className="text-xl text-foreground/70 mb-6">
+              {article.subtitle}
+            </p>
+          )}
 
           {/* Meta Info */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-foreground/60 mb-6 pb-6 border-b border-border">
