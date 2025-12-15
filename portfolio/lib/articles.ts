@@ -131,14 +131,18 @@ export async function getExternalArticles(): Promise<Article[]> {
           id: item.id,
           slug: item.slug,
           title: mediumData.title,
-          description: mediumData.description,
+          subtitle: undefined,
+          excerpt: mediumData.description,
           heroImage: mediumData.imageUrl,
+          heroImageAlt: mediumData.title,
           category: item.category,
           date: mediumData.publishedDate,
+          readingTimeMinutes: undefined,
           readTime: undefined,
           tags: mediumData.categories,
           isExternal: true,
           url: mediumData.url,
+          externalUrl: mediumData.url,
         };
       })
       .filter(Boolean) as Article[];
