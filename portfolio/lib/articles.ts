@@ -68,21 +68,33 @@ export async function getInternalArticles(): Promise<Article[]> {
       return null;
     }
 
-    // Calculate read time
+    // Calculate read time if not provided
     const stats = readingTime(content);
+    const readingMinutes = frontmatter.readingTimeMinutes || Math.ceil(stats.minutes);
+
+    // Get excerpt: use frontmatter excerpt or first paragraph
+    let excerpt = frontmatter.excerpt;
+    if (!excerpt) {
+      // Extract first paragraph from content
+      const paragraphs = content.split('\n\n').filter(p => !p.startsWith('#') && p.trim());
+      excerpt = paragraphs[0]?.substring(0, 200) || frontmatter.subtitle || '';
+    }
 
     return {
-      id: slug,
-      slug,
+      id: frontmatter.slug || slug,
+      slug: frontmatter.slug || slug,
       title: frontmatter.title,
-      description: frontmatter.description,
+      subtitle: frontmatter.subtitle,
+      excerpt,
       heroImage: frontmatter.heroImage || null,
+      heroImageAlt: frontmatter.heroImageAlt,
       category: frontmatter.category,
       date: frontmatter.date,
-      readTime: stats.text,
+      readingTimeMinutes: readingMinutes,
+      readTime: `${readingMinutes} min read`,
       tags: frontmatter.tags || [],
       isExternal: false,
-      url: `/articles/${slug}`,
+      url: `/articles/${frontmatter.slug || slug}`,
     };
   }).filter(Boolean) as Article[];
 
