@@ -171,8 +171,35 @@ export default function ArticleContent({ article, content, relatedArticles }: Ar
         </div>
       </motion.article>
 
-      {/* Optional: Comments, Likes, Subscribe sections go here */}
-      {/* We'll add these as modular components in the next step */}
+      {/* Author Section */}
+      <div className="container mx-auto px-6 pb-8">
+        <AuthorSection />
+      </div>
+
+      {/* Like Button */}
+      <div className="container mx-auto px-6 pb-8">
+        <LikeButton articleSlug={article.slug} />
+      </div>
+
+      {/* Subscribe Box */}
+      <div className="container mx-auto px-6 pb-8">
+        <Subscribe />
+      </div>
+
+      {/* Comments - Uncomment to enable */}
+      {/* <div className="container mx-auto px-6 pb-8">
+        <Comments
+          repo="yourusername/your-repo"
+          repoId="YOUR_REPO_ID"
+          category="Announcements"
+          categoryId="YOUR_CATEGORY_ID"
+        />
+      </div> */}
+
+      {/* Related Articles */}
+      <div className="container mx-auto px-6 pb-20">
+        <RelatedArticles articles={relatedArticles} currentSlug={article.slug} />
+      </div>
     </div>
   );
 }
