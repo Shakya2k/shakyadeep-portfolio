@@ -25,12 +25,17 @@ export interface Article {
 }
 
 export interface InternalArticleFrontmatter {
+  slug: string;
   title: string;
-  description: string;
-  heroImage: string;
-  category: string;
+  subtitle?: string;
   date: string;
+  category: string;
   tags?: string[];
+  heroImage: string;
+  heroImageAlt?: string;
+  readingTimeMinutes?: number;
+  isExternal: false;
+  excerpt?: string;
   draft?: boolean;
 }
 
