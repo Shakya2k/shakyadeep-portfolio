@@ -153,19 +153,12 @@ export default function ArticleContent({ article, content }: ArticleContentProps
         className="container mx-auto px-6 pb-20"
       >
         <div className="max-w-3xl mx-auto prose prose-lg prose-invert">
-          <MDXRemote
-            source={content}
-            components={components}
-            options={{
-              mdxOptions: {
-                remarkPlugins: [remarkGfm],
-                rehypePlugins: [
-                  rehypeSlug,
-                  [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-                ],
-              },
-            }}
-          />
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={components as any}
+          >
+            {content}
+          </ReactMarkdown>
         </div>
       </motion.article>
 
