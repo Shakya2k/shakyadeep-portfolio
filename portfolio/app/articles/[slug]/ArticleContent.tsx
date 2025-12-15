@@ -10,9 +10,16 @@ import type { Article } from "@/lib/articles";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+import AuthorSection from "@/components/article-enhancements/AuthorSection";
+import LikeButton from "@/components/article-enhancements/LikeButton";
+import Subscribe from "@/components/article-enhancements/Subscribe";
+import RelatedArticles from "@/components/article-enhancements/RelatedArticles";
+// import Comments from "@/components/article-enhancements/Comments"; // Uncomment to enable
+
 interface ArticleContentProps {
   article: Article;
   content: string;
+  relatedArticles: Article[];
 }
 
 // Custom MDX components for styling
