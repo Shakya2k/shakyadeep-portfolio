@@ -51,7 +51,7 @@ export default function UnifiedArticleCard({ article, index }: UnifiedArticleCar
         </h3>
         
         <p className="text-foreground/70 mb-4 flex-1 line-clamp-3">
-          {article.description}
+          {article.excerpt}
         </p>
 
         {/* Meta Info */}
