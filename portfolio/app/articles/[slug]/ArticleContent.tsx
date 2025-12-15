@@ -61,7 +61,7 @@ const components = {
   ),
 };
 
-export default function ArticleContent({ article, content }: ArticleContentProps) {
+export default function ArticleContent({ article, content, relatedArticles }: ArticleContentProps) {
   return (
     <div className="pt-20 min-h-screen">
       {/* Back Button */}
