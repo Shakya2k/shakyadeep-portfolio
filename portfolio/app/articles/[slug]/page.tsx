@@ -22,5 +22,11 @@ export default async function ArticlePage({ params }: { params: { slug: string }
 
   const { article, content } = result;
 
-  return <ArticleContent article={article} content={content} />;
+  // Get related articles (same category)
+  const allArticles = await getAllArticles();
+  const relatedArticles = allArticles.filter(a => 
+    a.category === article.category && a.slug !== article.slug
+  ).slice(0, 3);
+
+  return <ArticleContent article={article} content={content} relatedArticles={relatedArticles} />;
 }
