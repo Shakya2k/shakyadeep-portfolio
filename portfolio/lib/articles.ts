@@ -10,18 +10,23 @@ const articlesDirectory = path.join(process.cwd(), 'content/articles');
 const articlesConfigPath = path.join(process.cwd(), 'data/articles-config.json');
 
 // Unified article interface
+// Unified article summary for display on /articles
 export interface Article {
   id: string;
   slug: string;
   title: string;
-  description: string;
+  subtitle?: string;
+  excerpt: string; // Description/first paragraph
   heroImage: string | null;
+  heroImageAlt?: string;
   category: string;
   date: string;
+  readingTimeMinutes?: number;
   readTime?: string;
   tags?: string[];
   isExternal: boolean;
   url: string; // External URL for Medium articles, internal route for MDX
+  externalUrl?: string; // Medium URL if external
 }
 
 export interface InternalArticleFrontmatter {
