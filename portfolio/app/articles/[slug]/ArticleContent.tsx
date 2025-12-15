@@ -1,14 +1,14 @@
 "use client";
 
-import { MDXRemote } from "next-mdx-remote/rsc";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Article } from "@/lib/articles";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import remarkGfm from "remark-gfm";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface ArticleContentProps {
   article: Article;
