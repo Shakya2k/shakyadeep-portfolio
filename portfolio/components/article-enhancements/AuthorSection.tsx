@@ -8,7 +8,6 @@ interface AuthorSectionProps {
   name?: string;
   tagline?: string;
   avatar?: string;
-  github?: string;
   linkedin?: string;
   email?: string;
 }
@@ -16,8 +15,7 @@ interface AuthorSectionProps {
 export default function AuthorSection({
   name = "Shakyadeep Bhattacharyya",
   tagline = "Data Scientist | Turning analytics into measurable growth",
-  avatar = "/images/profile.jpg",
-  github = "https://github.com/Shakya2k",
+  avatar = "/images/EDIT_ME/profile.jpg",
   linkedin = "https://linkedin.com/in/shakyadeep",
   email = "/contact",
 }: AuthorSectionProps) {
