@@ -11,26 +11,38 @@ interface LikeButtonProps {
 export default function LikeButton({ articleSlug }: LikeButtonProps) {
   const [likes, setLikes] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Fetch current likes count
     fetchLikes();
-    
-    // Check if user has already liked (from localStorage)
-    const likedArticles = JSON.parse(localStorage.getItem("likedArticles") || "[]");
-    setHasLiked(likedArticles.includes(articleSlug));
   }, [articleSlug]);
 
   const fetchLikes = async () => {
+    setIsLoading(true);
+    setError(null);
+    
     try {
-      const response = await fetch(`/api/likes/${articleSlug}`);
+      const response = await fetch(`/api/likes/${articleSlug}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      
       if (response.ok) {
         const data = await response.json();
         setLikes(data.likes || 0);
+        setHasLiked(data.hasLiked || false);
+      } else {
+        console.error("Failed to fetch likes:", response.status);
+        setError("Could not load likes");
       }
     } catch (error) {
       console.error("Failed to fetch likes:", error);
+      setError("Could not load likes");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -38,24 +50,32 @@ export default function LikeButton({ articleSlug }: LikeButtonProps) {
     if (hasLiked || isLoading) return;
 
     setIsLoading(true);
+    setError(null);
 
     try {
       const response = await fetch(`/api/likes/${articleSlug}`, {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        const data = await response.json();
         setLikes(data.likes);
         setHasLiked(true);
-
-        // Save to localStorage
-        const likedArticles = JSON.parse(localStorage.getItem("likedArticles") || "[]");
-        likedArticles.push(articleSlug);
-        localStorage.setItem("likedArticles", JSON.stringify(likedArticles));
+      } else if (response.status === 409) {
+        // Already liked
+        setHasLiked(true);
+        setLikes(data.likes);
+      } else {
+        console.error("Failed to like article:", data.error);
+        setError("Could not like article");
       }
     } catch (error) {
       console.error("Failed to like article:", error);
+      setError("Could not like article");
     } finally {
       setIsLoading(false);
     }
