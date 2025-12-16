@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
@@ -9,6 +7,9 @@ import { motion } from "framer-motion";
 import type { Article } from "@/lib/articles";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 
 import AuthorSection from "@/components/article-enhancements/AuthorSection";
 import RelatedArticles from "@/components/article-enhancements/RelatedArticles";
