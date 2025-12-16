@@ -42,17 +42,6 @@ export default function AuthorSection({
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-            )}
             {linkedin && (
               <a
                 href={linkedin}
