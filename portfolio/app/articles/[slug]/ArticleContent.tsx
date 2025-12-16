@@ -35,8 +35,9 @@ const components = {
       {...props}
     />
   ),
-  ul: (props: any) => <ul className="list-disc list-inside mb-4 space-y-2 text-foreground/90" {...props} />,
-  ol: (props: any) => <ol className="list-decimal list-inside mb-4 space-y-2 text-foreground/90" {...props} />,
+  ul: (props: any) => <ul className="list-disc ml-6 mb-4 space-y-2 text-foreground/90" {...props} />,
+  ol: (props: any) => <ol className="list-decimal ml-6 mb-4 space-y-2 text-foreground/90" {...props} />,
+  li: (props: any) => <li className="text-foreground/90 leading-relaxed" {...props} />,
   blockquote: (props: any) => (
     <blockquote className="border-l-4 border-primary pl-4 italic my-4 text-foreground/80" {...props} />
   ),
