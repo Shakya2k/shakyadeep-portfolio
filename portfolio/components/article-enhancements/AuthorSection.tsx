@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 interface AuthorSectionProps {
   name?: string;
