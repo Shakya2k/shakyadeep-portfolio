@@ -181,11 +181,6 @@ export default function ArticleContent({ article, content, relatedArticles }: Ar
         <LikeButton articleSlug={article.slug} />
       </div>
 
-      {/* Subscribe Box */}
-      <div className="container mx-auto px-6 pb-8">
-        <Subscribe />
-      </div>
-
       {/* Comments - Uncomment to enable */}
       {/* <div className="container mx-auto px-6 pb-8">
         <Comments
