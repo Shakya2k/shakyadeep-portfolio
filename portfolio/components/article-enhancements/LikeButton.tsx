@@ -82,7 +82,7 @@ export default function LikeButton({ articleSlug }: LikeButtonProps) {
   };
 
   return (
-    <div className="flex items-center gap-4 max-w-3xl mx-auto mt-8">
+    <div className="flex flex-col items-start gap-2 max-w-3xl mx-auto mt-8">
       <motion.button
         whileTap={{ scale: 0.9 }}
         onClick={handleLike}
@@ -99,11 +99,17 @@ export default function LikeButton({ articleSlug }: LikeButtonProps) {
           size={20}
           className={hasLiked ? "fill-primary" : ""}
         />
-        <span>{likes} {likes === 1 ? "Like" : "Likes"}</span>
+        <span>
+          {isLoading && !hasLiked ? "Loading..." : `${likes} ${likes === 1 ? "Like" : "Likes"}`}
+        </span>
       </motion.button>
 
       {hasLiked && (
         <span className="text-sm text-foreground/60">Thank you for your support!</span>
+      )}
+      
+      {error && (
+        <span className="text-sm text-red-500">{error}</span>
       )}
     </div>
   );
