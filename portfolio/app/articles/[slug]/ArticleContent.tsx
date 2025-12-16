@@ -174,11 +174,6 @@ export default function ArticleContent({ article, content, relatedArticles }: Ar
         <AuthorSection />
       </div>
 
-      {/* Like Button */}
-      <div className="container mx-auto px-6 pb-8">
-        <LikeButton articleSlug={article.slug} />
-      </div>
-
       {/* Comments - Uncomment to enable */}
       {/* <div className="container mx-auto px-6 pb-8">
         <Comments
