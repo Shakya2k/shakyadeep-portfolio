@@ -162,7 +162,8 @@ export default function ArticleContent({ article, content, relatedArticles }: Ar
       >
         <div className="max-w-3xl mx-auto prose prose-lg prose-invert">
           <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkGfm, remarkMath]}
+            rehypePlugins={[rehypeKatex]}
             components={components as any}
           >
             {content}
