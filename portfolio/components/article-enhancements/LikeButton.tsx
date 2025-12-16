@@ -53,6 +53,8 @@ export default function LikeButton({ articleSlug }: LikeButtonProps) {
     setError(null);
 
     try {
+      console.log(`[LikeButton] Attempting to like: ${articleSlug}`);
+      
       const response = await fetch(`/api/likes/${articleSlug}`, {
         method: "POST",
         headers: {
@@ -60,22 +62,34 @@ export default function LikeButton({ articleSlug }: LikeButtonProps) {
         },
       });
 
-      const data = await response.json();
+      console.log(`[LikeButton] Response status: ${response.status}`);
 
-      if (response.ok) {
-        setLikes(data.likes);
-        setHasLiked(true);
-      } else if (response.status === 409) {
-        // Already liked
-        setHasLiked(true);
-        setLikes(data.likes);
-      } else {
-        console.error("Failed to like article:", data.error);
-        setError("Could not like article");
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        console.error(`[LikeButton] API error:`, data);
+        
+        if (response.status === 409) {
+          // Already liked - this is actually success
+          console.log(`[LikeButton] Already liked (409)`);
+          setHasLiked(true);
+          setLikes(data.likes || likes);
+          return;
+        }
+        
+        // Other errors
+        setError(`Error: ${data.error || response.statusText}`);
+        return;
       }
+
+      const data = await response.json();
+      console.log(`[LikeButton] Success:`, data);
+      
+      setLikes(data.likes);
+      setHasLiked(true);
+      
     } catch (error) {
-      console.error("Failed to like article:", error);
-      setError("Could not like article");
+      console.error("[LikeButton] Network error:", error);
+      setError("Network error. Please try again.");
     } finally {
       setIsLoading(false);
     }
