@@ -95,35 +95,58 @@ export default function LikeButton({ articleSlug }: LikeButtonProps) {
     }
   };
 
+  if (isLoading && likes === 0) {
+    return (
+      <div className="flex items-center gap-2 max-w-3xl mx-auto mt-8">
+        <div className="flex items-center gap-2 px-6 py-3">
+          <Heart size={20} className="text-foreground/40" />
+          <span className="text-foreground/60">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col items-start gap-2 max-w-3xl mx-auto mt-8">
       <motion.button
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ scale: hasLiked ? 1 : 0.9 }}
         onClick={handleLike}
         disabled={hasLiked || isLoading}
         className={
           `flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${
             hasLiked
-              ? "bg-primary/20 text-primary border border-primary/30"
-              : "bg-card border border-border hover:border-primary/50 hover:bg-primary/10 text-foreground"
-          } disabled:opacity-50 disabled:cursor-not-allowed`
+              ? "bg-primary/20 text-primary border border-primary/30 cursor-default"
+              : "bg-card border border-border hover:border-primary/50 hover:bg-primary/10 text-foreground cursor-pointer"
+          } ${isLoading && !hasLiked ? "opacity-50" : ""}`
         }
+        title={hasLiked ? "You've already liked this article" : "Like this article"}
       >
         <Heart
           size={20}
           className={hasLiked ? "fill-primary" : ""}
         />
         <span>
-          {isLoading && !hasLiked ? "Loading..." : `${likes} ${likes === 1 ? "Like" : "Likes"}`}
+          {likes} {likes === 1 ? "Like" : "Likes"}
         </span>
       </motion.button>
 
-      {hasLiked && (
-        <span className="text-sm text-foreground/60">Thank you for your support!</span>
+      {hasLiked && !error && (
+        <span className="text-sm text-foreground/60">✓ Thank you for your support!</span>
       )}
       
       {error && (
-        <span className="text-sm text-red-500">{error}</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-red-400">{error}</span>
+          <button 
+            onClick={() => {
+              setError(null);
+              fetchLikes();
+            }}
+            className="text-xs text-foreground/60 hover:text-primary underline"
+          >
+            Try again
+          </button>
+        </div>
       )}
     </div>
   );
