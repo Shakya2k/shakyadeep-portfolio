@@ -14,7 +14,7 @@ tags:
 heroImage: "/articles/elevate-class/hero.png"
 heroImageAlt: "Stylized credit card rising above a crowd, symbolizing an emerging customer segment"
 readingTimeMinutes: 25
-draft: true
+draft: false
 isExternal: false
 ---
 
@@ -34,7 +34,7 @@ But there’s a **fourth group** in the middle — a massive, overlooked segment
 This article proposes a new category:
 
 # **The Elevate Class Card**  
-### *A semi-premium tier priced at $99–$199, delivering lifestyle upgrades and meaningful rewards — with fair, transparent economics that create lifetime value **and** strong risk-adjusted profitability for issuers.*
+### *A semi-premium tier priced at $99 – $199, delivering lifestyle upgrades and meaningful rewards — with fair, transparent economics that create lifetime value **and** strong risk-adjusted profitability for issuers.*
 
 The design is **value-aligned and transparent**: the customer gets real upgrades; the issuer gets real economics. No games.
 
@@ -46,11 +46,11 @@ The design is **value-aligned and transparent**: the customer gets real upgrades
 
 The portfolio shape today is skewed toward the extremes:
 
-- **Premium ($395–$695+)**  
+- **Premium ($395 – $695+)**  
   - Unlimited lounges, concierge, luxury benefits  
   - Underwritten and priced for high-spend, low-revolve, high-FICO customers  
 
-- **Mid-tier ($95–$150)**  
+- **Mid-tier ($95 – $150)**  
   - Solid multipliers, decent perks, mass-market targeting  
   - Built more for affordability than aspiration  
 
@@ -212,17 +212,17 @@ Now we quantify the economics for **Elevate 150** with clearly explained metrics
 
 **Interest Revenue (IR):**
 
-\[
+$$
 IR = B \times APR = 1{,}500 \times 0.24 = \$360
-\]
+$$
 
 - *Represents annual interest collected from the average carried balance.*
 
 **Interchange Revenue (IC):**
 
-\[
+$$
 IC = S \times 12 \times 0.017 = 1{,}200 \times 12 \times 0.017 = \$244.8 \approx \$245
-\]
+$$
 
 - *Represents the issuer’s net revenue from merchant fees across all transactions.*
 
@@ -233,9 +233,9 @@ IC = S \times 12 \times 0.017 = 1{,}200 \times 12 \times 0.017 = \$244.8 \approx
 
 **Total Gross Revenue (GR):**
 
-\[
+$$
 GR = IR + IC + AF = 360 + 245 + 149 = \$754
-\]
+$$
 
 ---
 
@@ -269,9 +269,9 @@ All costs below are **annual per active account** estimates.
 
 **Total Cost (TC):**
 
-\[
+$$
 TC = 70 + 35 + 55 + 10 + 20 + 40 + 45 + 40 = 315
-\]
+$$
 
 - *This is the full loaded cost including benefits, risk, and operational overhead.*
 
@@ -279,9 +279,9 @@ TC = 70 + 35 + 55 + 10 + 20 + 40 + 45 + 40 = 315
 
 ### 4.4 Net Contribution (Flagship Elevate 150)
 
-\[
+$$
 \text{Net Contribution} = GR - TC = 754 - 315 = \$439
-\]
+$$
 
 Rounded: **\$440 per active account per year**.
 
@@ -311,21 +311,21 @@ We keep **behavioral inputs** fixed (same customer) and adjust benefit costs.
 - Losses: \$45  
 - CAC amortized: \$40  
 
-\[
+$$
 TC_{100} = 65 + 25 + 45 + 10 + 10 + 40 + 45 + 40 = 280
-\]
+$$
 
 **Gross Revenue (same IR & IC as before):**
 
-\[
+$$
 GR_{100} = 360 + 245 + 99 = 704
-\]
+$$
 
 **Net Contribution:**
 
-\[
+$$
 NC_{100} = 704 - 280 = 424
-\]
+$$
 
 - *Entry tier still delivers ~\$424 per account per year, while giving aspirational customers a lower AF on-ramp.*
 
@@ -357,21 +357,21 @@ NC_{100} = 704 - 280 = 424
 - Losses: \$45  
 - CAC amortized: \$40  
 
-\[
+$$
 TC_{200} = 80 + 45 + 70 + 15 + 30 + 40 + 45 + 40 = 365
-\]
+$$
 
 **Gross Revenue:**
 
-\[
+$$
 GR_{200} = 360 + 245 + 199 = 804
-\]
+$$
 
 **Net Contribution:**
 
-\[
+$$
 NC_{200} = 804 - 365 = 439
-\]
+$$
 
 - *Elevate 200 offers richer value and a higher fee; unit contribution is similar to 150 but with skew toward more affluent aspirational users.*
 
@@ -418,9 +418,9 @@ These are the building blocks of Elevate pricing.
 
 - **Expected Loss (EL)**  
   *Expected dollar loss from credit risk:*
-  \[
+  $$
   EL_i = PD_i \times EAD_i \times LGD_i
-  \]
+  $$
 
 - **Revolve Propensity (RP)**  
   *Likelihood (0–1) that a customer will regularly carry a balance instead of paying in full.*
@@ -433,15 +433,15 @@ These are the building blocks of Elevate pricing.
 
 - **Interest Revenue (IR)**  
   *Expected annual interest income from revolving balance:*
-  \[
+  $$
   IR_i = B_i \times APR_i
-  \]
+  $$
 
 - **Interchange Revenue (IC)**  
   *Expected annual net merchant fee income:*
-  \[
+  $$
   IC_i = S_i \times 12 \times \text{InterchangeRate}
-  \]
+  $$
 
 - **Benefit Cost (BC)**  
   *Expected annual cost of all rewards, credits, lounges, and experiential perks consumed.*
@@ -454,15 +454,15 @@ These are the building blocks of Elevate pricing.
 
 - **RARPU (Risk-Adjusted Revenue Per User)**  
   *Core profitability metric per customer:*
-  \[
+  $$
   RARPU_i = (IR_i + IC_i + AF_i) - (BC_i + EL_i + OH_i + CAC_i)
-  \]
+  $$
 
 - **LTV (Lifetime Value)**  
   *Discounted sum of future RARPU across the customer’s expected relationship:*
-  \[
+  $$
   LTV_i = \sum_{t=1}^{T} \frac{RARPU_{i,t}}{(1 + r)^t}
-  \]
+  $$
   where *r* is a discount rate and *T* is expected life in years.
 ---
 
@@ -628,9 +628,9 @@ To make this concrete, let’s simulate **three customers** under **Elevate 150*
 - **LGD:** 70%  
   *Issuer recovers ~30% through collections/charge-offs.*  
 - **EL:**  
-  \[
+  $$
   EL = 0.02 \times 1{,}800 \times 0.7 = \$25.2 \approx \$25
-  \]  
+  $$
 - **Overhead OH:** \$40  
   *Servicing and operational costs.*  
 - **CAC (annualized):** \$40  
@@ -653,9 +653,9 @@ To make this concrete, let’s simulate **three customers** under **Elevate 150*
 
 **RARPU(A):**
 
-\[
+$$
 RARPU_A = 754 - 255 = \$499
-\]
+$$
 
 ---
 
@@ -671,9 +671,9 @@ RARPU_A = 754 - 255 = \$499
   *Even safer than A.*  
 - **EAD:** \$1,000  
 - **LGD:** 70% →  
-  \[
+  $$
   EL = 0.015 \times 1{,}000 \times 0.7 = \$10.5 \approx \$11
-  \]  
+  $$
 - **OH:** \$40  
 - **CAC:** \$40  
 
@@ -694,9 +694,9 @@ RARPU_A = 754 - 255 = \$499
 
 **RARPU(B):**
 
-\[
+$$
 RARPU_B = 504 - 211 = \$293
-\]
+$$
 
 ---
 
@@ -710,9 +710,9 @@ RARPU_B = 504 - 211 = \$293
   *Much higher probability of default.*  
 - **EAD:** \$2,000  
 - **LGD:** 80% →  
-  \[
+  $$
   EL = 0.08 \times 2{,}000 \times 0.8 = \$128
-  \]  
+  $$ 
 - **OH:** \$40  
 - **CAC:** \$40  
 
@@ -730,9 +730,9 @@ RARPU_B = 504 - 211 = \$293
 
 **RARPU(C):**
 
-\[
+$$
 RARPU_C = 754 - 338 = \$416
-\]
+$$
 
 On paper, still profitable — but PD is significantly higher. Depending on capital constraints and risk appetite, this customer might be **excluded** or routed to a more conservative product.
 

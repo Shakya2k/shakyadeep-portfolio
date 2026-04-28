@@ -1,12 +1,32 @@
 [
   {
+  "id": "rock_emergency",
+  "company": "Rock Emergency Services",
+  "logo": "/images/EDIT_ME/logo-rock.png",
+  "title": "Senior Data Scientist - Risk, Decision Science & AI Systems",
+  "department": "Operations & Intelligence",
+  "location": "Rochester, NY",
+  "dates": "Feb 2026 - Present",
+  "headline": "Built and deployed an AI-driven operational intelligence system enabling real-time monitoring, alerts, and decision-making.",
+  "bullets": [
+    "Architected and deployed an event-driven data platform unifying CRM, scheduling, and financial systems into a single operational intelligence layer.",
+    "Reduced manual operational oversight by ~40% through real-time monitoring and automated alerting for SLA breaches and workflow inefficiencies.",
+    "Launched a Slack-based AI assistant enabling instant access to project, financial, and scheduling insights, improving response time across teams.",
+    "Engineered end-to-end data pipelines (ingestion, normalization, state modeling, decision layer) using FastAPI, PostgreSQL, and Python.",
+    "Enabled scalable automation of compliance, workforce tracking, and operational analytics, reducing reliance on fragmented manual processes.",
+    "Partnered with leadership to convert operational workflows into data-driven systems and automation strategies."
+  ],
+  "keySkills": ["Python", "SQL", "FastAPI", "PostgreSQL", "Event-Driven Architecture", "Automation", "AI/LLMs"],
+  "keyImpact": "🤖 ~40% reduction in manual ops effort with real-time alerts & AI-driven decisioning"
+},
+  {
     "id": "simon-gta",
     "company": "University of Rochester - Simon Business School",
     "logo": "/images/EDIT_ME/logo-simon.png",
     "title": "Graduate Teaching Assistant, Analytics",
     "department": "Teaching & Learning",
     "location": "Rochester, NY",
-    "dates": "Jan 2025 - Present",
+    "dates": "Jan 2025 - Dec 2025",
     "headline": "Boosted cohort mastery in SQL and Python through structured mentorship.",
     "bullets": [
       "Trained 100+ MSBA students in SQL, Python, and pandas through one-to-one and group sessions, improving average scores by 30%.",
@@ -24,7 +44,7 @@
     "title": "Marketing Strategy Analyst",
     "department": "City of Rochester Project",
     "location": "Rochester, NY",
-    "dates": "Oct 2024 - Dec 2024",
+    "dates": "Sep 2024 - Dec 2024",
     "headline": "Analyzed student churn to design high-ROI retention actions.",
     "bullets": [
       "Performed cohort analysis and churn modeling to isolate top 3 dropout drivers.",

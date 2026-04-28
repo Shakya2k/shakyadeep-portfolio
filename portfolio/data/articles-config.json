@@ -5,5 +5,12 @@
     "mediumUrl": "https://medium.com/@shakyadeepbhattacharyya/breaking-a-saas-monopoly-how-nlp-turns-customer-sentiment-into-a-go-to-market-checkmate-b34c7de6976d",
     "category": "SaaS",
     "isExternal": true
+  },
+  {
+    "id": "ai-system-design",
+    "slug": "why-most-ai-products-fail-the-missing-system-design-layer-ai-architecture-guide-c6b98f4817ac",
+    "mediumUrl": "https://medium.com/towards-artificial-intelligence/why-most-ai-products-fail-the-missing-system-design-layer-ai-architecture-guide-c6b98f4817ac",
+    "category": "AI",
+    "isExternal": true
   }
 ]

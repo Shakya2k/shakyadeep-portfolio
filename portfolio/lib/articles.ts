@@ -118,9 +118,7 @@ export async function getExternalArticles(): Promise<Article[]> {
     const articles = config
       .filter((item: any) => item.isExternal)
       .map((item: any) => {
-        const mediumData = mediumArticles.find(a => 
-          a.url.includes(item.slug) || item.mediumUrl.includes(item.slug)
-        );
+        const mediumData = mediumArticles.find(a => a.url.includes(item.slug));
 
         if (!mediumData) {
           console.warn(`Medium article not found for slug: ${item.slug}`);
