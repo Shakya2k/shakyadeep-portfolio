@@ -1,24 +1,25 @@
 [
   {
-  "id": "rock_emergency",
-  "company": "Rock Emergency Services",
-  "logo": "/images/EDIT_ME/logo-rock.png",
-  "title": "Senior Data Scientist - Risk, Decision Science & AI Systems",
-  "department": "Operations & Intelligence",
-  "location": "Rochester, NY",
-  "dates": "Feb 2026 - Present",
-  "headline": "Built and deployed an AI-driven operational intelligence system enabling real-time monitoring, alerts, and decision-making.",
-  "bullets": [
-    "Architected and deployed an event-driven data platform unifying CRM, scheduling, and financial systems into a single operational intelligence layer.",
-    "Reduced manual operational oversight by ~40% through real-time monitoring and automated alerting for SLA breaches and workflow inefficiencies.",
-    "Launched a Slack-based AI assistant enabling instant access to project, financial, and scheduling insights, improving response time across teams.",
-    "Engineered end-to-end data pipelines (ingestion, normalization, state modeling, decision layer) using FastAPI, PostgreSQL, and Python.",
-    "Enabled scalable automation of compliance, workforce tracking, and operational analytics, reducing reliance on fragmented manual processes.",
-    "Partnered with leadership to convert operational workflows into data-driven systems and automation strategies."
-  ],
-  "keySkills": ["Python", "SQL", "FastAPI", "PostgreSQL", "Event-Driven Architecture", "Automation", "AI/LLMs"],
-  "keyImpact": "🤖 ~40% reduction in manual ops effort with real-time alerts & AI-driven decisioning"
-},
+    "id": "rock-emergency",
+    "company": "Rock Emergency",
+    "title": "Senior Data Scientist",
+    "location": "United States",
+    "dates": "Mar 2026 - Present",
+    "headline": "Architecting an AI-driven operational intelligence platform for real-time decisioning, automation, and cost optimization.",
+    "bullets": [
+      "Architected an event-driven operational intelligence platform processing 1,000+ events/day across project, scheduling, and financial systems, enabling real-time decisioning.",
+      "Designed automated diagnostics pipelines identifying 12–15 operational anomalies per day (~350+/month) using structured event modeling and rule-based detection.",
+      "Translated 100+ workflow inefficiencies into scalable, system-level automation logic, reducing reliance on manual intervention and ad hoc analysis.",
+      "Engineered real-time monitoring and alerting systems (webhook-driven) reducing issue detection latency from hours to under 5 minutes.",
+      "Developed a unified data layer and canonical schemas to consolidate fragmented operational data, reducing retrieval and validation overhead by 50%+.",
+      "Built automated validation frameworks for scheduling and payroll systems, improving accuracy by 90%+ through rule enforcement and data consistency checks.",
+      "Designed cost optimization and decision-support workflows contributing to $25K+/month in projected savings through reduced leakage and improved execution efficiency.",
+      "Reduced manual operational load by 60–70% by productionizing decision workflows and embedding intelligence into system-level processes.",
+      "Currently developing LLM-powered agent workflows for natural language querying, workflow orchestration, and automated decision support, targeting 40–60% query automation."
+    ],
+    "keySkills": ["AI Systems", "LLMs", "Agentic Workflows", "System Design", "Event-Driven Architecture", "Python", "SQL", "Data Modeling", "Workflow Automation"],
+    "keyImpact": "💰 $25K+/month savings | ⚡ <5 min detection latency | 🤖 60% ops automation"
+  },
   {
     "id": "simon-gta",
     "company": "University of Rochester - Simon Business School",
