@@ -1,10 +1,12 @@
 [
   {
     "id": "rock-emergency",
-    "company": "Rock Emergency",
+    "company": "Rock Emergency Services",
+    "logo": "/images/EDIT_ME/logo-rock.png",
     "title": "Senior Data Scientist",
-    "location": "United States",
-    "dates": "Mar 2026 - Present",
+    "department": "AI Systems & Decision Science",
+    "location": "Rochester, NY",
+    "dates": "Feb 2026 - Present",
     "headline": "Architecting an AI-driven operational intelligence platform for real-time decisioning, automation, and cost optimization.",
     "bullets": [
       "Architected an event-driven operational intelligence platform processing 1,000+ events/day across project, scheduling, and financial systems, enabling real-time decisioning.",
