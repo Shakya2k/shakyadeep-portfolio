@@ -3,115 +3,105 @@
     "id": "rock-emergency",
     "company": "Rock Emergency Services",
     "logo": "/images/EDIT_ME/logo-rock.png",
-    "title": "Senior Data Scientist",
-    "department": "AI Systems & Decision Science",
+    "title": "Data Scientist - AI Systems & Decision Intelligence",
+    "department": "Production Decision Systems",
     "location": "Rochester, NY",
     "dates": "Feb 2026 - Present",
-    "headline": "Architecting an AI-driven operational intelligence platform for real-time decisioning, automation, and cost optimization.",
+    "headline": "Building production decision-intelligence systems that connect Python/SQL models to operational actions across forecasting, exception analytics, and governed AI workflows.",
     "bullets": [
-      "Architected an event-driven operational intelligence platform processing 1,000+ events/day across project, scheduling, and financial systems, enabling real-time decisioning.",
-      "Designed automated diagnostics pipelines identifying 12–15 operational anomalies per day (~350+/month) using structured event modeling and rule-based detection.",
-      "Translated 100+ workflow inefficiencies into scalable, system-level automation logic, reducing reliance on manual intervention and ad hoc analysis.",
-      "Engineered real-time monitoring and alerting systems (webhook-driven) reducing issue detection latency from hours to under 5 minutes.",
-      "Developed a unified data layer and canonical schemas to consolidate fragmented operational data, reducing retrieval and validation overhead by 50%+.",
-      "Built automated validation frameworks for scheduling and payroll systems, improving accuracy by 90%+ through rule enforcement and data consistency checks.",
-      "Designed cost optimization and decision-support workflows contributing to $25K+/month in projected savings through reduced leakage and improved execution efficiency.",
-      "Reduced manual operational load by 60–70% by productionizing decision workflows and embedding intelligence into system-level processes.",
-      "Currently developing LLM-powered agent workflows for natural language querying, workflow orchestration, and automated decision support, targeting 40–60% query automation."
+      "Designed and operated production decision-intelligence systems spanning Python/SQL pipelines, multi-system integrations, forecasting, and anomaly/exception analytics across 1,679 operational projects representing approximately $22M in estimated revenue.",
+      "Built data quality controls and reconciliation workflows that reduced reconciliation effort by 50%+, with key signal latency under 5 minutes.",
+      "Delivered operational monitoring that produced 414 targeted alerts and 171 automated workflows, turning fragmented operational data into measurable actions.",
+      "Implemented governed LLM / agent workflows with logged actions — 1,243 agent runs and 4,522 logged actions — as a supporting layer on top of the decision-systems foundation.",
+      "Supported cost and leakage reduction initiatives with approximately $25K/month in PROJECTED SAVINGS (projected, not realized)."
     ],
-    "keySkills": ["AI Systems", "LLMs", "Agentic Workflows", "System Design", "Event-Driven Architecture", "Python", "SQL", "Data Modeling", "Workflow Automation"],
-    "keyImpact": "💰 $25K+/month savings | ⚡ <5 min detection latency | 🤖 60% ops automation"
+    "keySkills": ["Python", "SQL", "Decision Systems", "Forecasting", "Anomaly Detection", "Operational Analytics", "Governed LLM Workflows", "Data Pipelines"],
+    "keyImpact": "1,679 projects · ~$22M estimated revenue · 50%+ reconciliation-effort reduction · <5 min signal latency · ~$25K/mo PROJECTED SAVINGS"
   },
   {
     "id": "simon-gta",
     "company": "University of Rochester - Simon Business School",
     "logo": "/images/EDIT_ME/logo-simon.png",
-    "title": "Graduate Teaching Assistant, Analytics",
-    "department": "Teaching & Learning",
+    "title": "Instructional Analytics Associate - Analytics Design & Application",
+    "department": "M.S. Business Analytics",
     "location": "Rochester, NY",
     "dates": "Jan 2025 - Dec 2025",
-    "headline": "Boosted cohort mastery in SQL and Python through structured mentorship.",
+    "headline": "Designed and delivered Python, SQL, ML, and BI labs for graduate analytics students with reproducible analysis and grading automation.",
     "bullets": [
-      "Trained 100+ MSBA students in SQL, Python, and pandas through one-to-one and group sessions, improving average scores by 30%.",
-      "Led 3+ Pricing Analytics reviews applying elasticity and game theory to real-world cases, increasing concept retention by 25%.",
-      "Created graded practice sets and analytics rubrics that standardized evaluation across 4 sections.",
-      "Provided continuous Slack and office-hour support resolving 10+ student issues weekly."
+      "Built and facilitated Python / SQL / ML / BI labs for 100+ graduate students, emphasizing reproducible analysis and applied decision science.",
+      "Designed analytics instruction materials connecting statistical methods to practical business and operational questions.",
+      "Automated grading and feedback workflows, reducing evaluation time by approximately 70%."
     ],
-    "keySkills": ["SQL", "Python", "pandas", "Pricing Analytics", "Mentorship", "Data Education"],
-    "keyImpact": "📊 Student performance +30%"
+    "keySkills": ["Python", "SQL", "Machine Learning", "BI", "Reproducible Analysis", "Analytics Instruction"],
+    "keyImpact": "100+ graduate students · ~70% reduction in evaluation time"
   },
   {
     "id": "simon-vision",
     "company": "Simon Vision Consulting",
     "logo": "/images/EDIT_ME/logo-simon-vision.png",
-    "title": "Marketing Strategy Analyst",
-    "department": "City of Rochester Project",
+    "title": "Data Science Analyst - Client Engagement: City of Rochester",
+    "department": "Client Engagement",
     "location": "Rochester, NY",
     "dates": "Sep 2024 - Dec 2024",
-    "headline": "Analyzed student churn to design high-ROI retention actions.",
+    "headline": "Applied classification, experimentation, and uplift modeling to support resource-allocation decisions for the City of Rochester.",
     "bullets": [
-      "Performed cohort analysis and churn modeling to isolate top 3 dropout drivers.",
-      "Developed targeted retention experiments that increased engagement by 15%.",
-      "Built Tableau dashboards for city stakeholders enabling data-driven funding decisions."
+      "Built classification and uplift models on 5,000+ survey responses, improving discrimination by +0.07 AUC relative to the baseline classifier.",
+      "Designed A/B testing and experimentation frameworks to evaluate intervention options under operational constraints.",
+      "Applied TF-IDF, topic modeling, and clustering for unstructured feedback analysis informing decision support.",
+      "Delivered Power BI and SQL reporting that reduced reporting effort by approximately 50% while supporting resource-allocation recommendations."
     ],
-    "keySkills": ["Cohort Analysis", "A/B Testing", "SQL", "Tableau", "Experiment Design", "Stakeholder Communication"],
-    "keyImpact": "📈 15% retention uplift"
+    "keySkills": ["Classification", "A/B Testing", "Uplift Modeling", "SQL", "Power BI", "NLP", "Decision Support"],
+    "keyImpact": "+0.07 AUC · 5,000+ survey responses · ~50% reporting-effort reduction"
   },
   {
     "id": "cognizant",
-    "company": "Cognizant",
+    "company": "Cognizant Technology Solutions",
     "logo": "/images/EDIT_ME/logo-cognizant.png",
-    "title": "Business Data Scientist (Previously Jr Data Analyst → Intern)",
-    "department": "Life Sciences Analytics - Novartis Account",
+    "title": "Junior Software Engineer | Data Analytics & Machine Learning",
+    "department": "Enterprise Analytics & Machine Learning",
     "location": "Kolkata, India",
     "dates": "Feb 2022 - Jun 2024",
-    "headline": "Advanced through three promotions delivering measurable analytics ROI.",
+    "headline": "Progressed across three levels while working increasingly deeply in enterprise analytics and machine learning — from internship through an early-career analytics/ML assignment into Junior Software Engineer.",
+    "progressionNote": "Visible titles below are functional public-facing descriptors of the work performed at each stage. They communicate career progression; the middle stage is not presented as Cognizant's formal HR title.",
     "subroles": [
       {
-        "role": "Business Data Scientist",
-        "dates": "Sep 2023 - Jun 2024",
+        "role": "Junior Software Engineer | Data Analytics & Machine Learning",
+        "displayTitle": "Junior Software Engineer | Data Analytics & Machine Learning",
+        "stage": "Final stage",
+        "dates": "Final stage",
         "bullets": [
-          "Developed Python models to forecast product demand and optimize inventory allocation, improving forecast accuracy by 22%.",
-          "Deployed ETL workflow using Snowflake and Azure Data Factory for cross-brand reporting, cutting turnaround by 40%.",
-          "Collaborated with Novartis stakeholders to define KPIs that linked analytics to $30M cost savings."
+          "Built and evaluated supervised models (XGBoost, regression, classification, forecasting) on enterprise datasets including 250K+ clinical-trial records and TB-scale operational data.",
+          "Productionized repeatable analytical workflows — SQL ETL, feature engineering, and batch scoring — improving model-data latency by approximately 20% and supporting roughly 90% reduction in recurring reporting-cycle time.",
+          "Developed a TensorFlow model that improved detection precision by 12%; conducted model evaluation, threshold/error analysis, and data-quality validation with analytical documentation for engineering and business stakeholders.",
+          "Partnered cross-functionally to deliver analytics supporting approximately $30M+ in cost avoidance and about 20% faster decision turnaround."
         ]
       },
       {
-        "role": "Junior Data Analyst",
-        "dates": "Sep 2022 - Aug 2023",
+        "role": "Analytics & Machine Learning Associate",
+        "displayTitle": "Analytics & Machine Learning Associate",
+        "officialLevel": "Trainee",
+        "stage": "Middle stage",
+        "dates": "Middle stage",
+        "titleNote": "Functional public-facing descriptor for early-career analytics/ML responsibilities; not Cognizant's formal HR title.",
         "bullets": [
-          "Engineered SQL pipelines to unify 10+ data sources for marketing insights, reducing data latency by 35%.",
-          "Built interactive Tableau dashboards for brand performance, used by senior marketing managers globally."
+          "Owned SQL/Python data pipelines, feature engineering, and analytical workflows supporting predictive modeling and enterprise reporting.",
+          "Supported model development and evaluation cycles — preparing datasets, validating data quality, and documenting analytical assumptions for downstream scoring.",
+          "Automated recurring reporting and analysis steps, reducing manual cycle time for stakeholders across engineering and business teams."
         ]
       },
       {
-        "role": "Data Analyst Intern",
-        "dates": "Feb 2022 - Aug 2022",
+        "role": "Intern | Data & Analytics",
+        "displayTitle": "Intern | Data & Analytics",
+        "stage": "Entry stage",
+        "dates": "Entry stage",
         "bullets": [
-          "Cleaned and validated 500K+ rows of sales data using SQL and Python QA scripts, cutting reporting errors by 40%.",
-          "Automated KPI trackers in Excel and Tableau, saving ~12 hours weekly manual work."
+          "Performed data validation, SQL/Python analysis, and dataset preparation for enterprise analytics workstreams.",
+          "Supported reporting automation and quality checks that reduced recurring manual validation effort.",
+          "Documented analytical findings and collaborated with engineers and analysts on foundational data-quality work."
         ]
       }
     ],
-    "keySkills": ["SQL", "Python", "Snowflake", "ETL", "Tableau", "Forecasting"],
-    "keyImpact": "💰 $30M+ validated cost savings & 40% report cycle time reduced"
-  },
-  {
-    "id": "iem-mlresearch",
-    "company": "IEM - Innovation & Entrepreneurship Development Cell",
-    "logo": "/images/EDIT_ME/logo-iem.png",
-    "title": "Machine Learning Research Associate",
-    "department": "Applied AI & Data Science",
-    "location": "Kolkata, India",
-    "dates": "Feb 2019 - Dec 2021",
-    "headline": "Researched predictive analytics and computer vision models for startup projects.",
-    "bullets": [
-      "Built and trained supervised learning models using scikit-learn and TensorFlow to forecast consumer trends with 87% accuracy.",
-      "Engineered a computer vision pipeline that classified manufacturing defects with 92% precision, later adopted by two partner startups.",
-      "Led a cross-functional team of 5 researchers to prototype scalable ML workflows for early-stage ventures.",
-      "Improved model accuracy 25% on 100K+ records (TensorFlow/scikit-learn); conducted 10+ analytics workshops for 1,000+ learners on SQL/Python/Tableau. "
-    ],
-    "keySkills": ["Machine Learning", "Python", "TensorFlow", "Computer Vision", "Research", "Data Modeling"],
-    "keyImpact": "🤖 Deployed 2 ML prototypes adopted by startups"
+    "keySkills": ["Python", "SQL", "XGBoost", "TensorFlow", "ETL", "Feature Engineering", "Forecasting", "Model Evaluation"],
+    "keyImpact": "Enterprise ML & ETL · ~90% reporting-cycle reduction · ~20% model-data latency improvement · work supporting $30M+ cost avoidance"
   }
 ]

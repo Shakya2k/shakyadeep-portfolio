@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { SITE_CONFIG } from "@/config/site";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -16,25 +17,35 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shakyadeep Bhattacharyya | Data Scientist & Analytics Professional",
-  description: "From data chaos to business clarity. Turning analytics into measurable growth. Specializing in Pricing, Experimentation, and Strategic Insights.",
-  keywords: ["Data Science", "Analytics", "Pricing", "A/B Testing", "Machine Learning", "Business Intelligence"],
-  authors: [{ name: "Shakyadeep Bhattacharyya" }],
+  title: SITE_CONFIG.title,
+  description: SITE_CONFIG.description,
+  keywords: [
+    "Data Scientist",
+    "Decision Science",
+    "Production ML",
+    "Python",
+    "SQL",
+    "Machine Learning",
+    "Forecasting",
+    "Experimentation",
+    "Operational Analytics",
+  ],
+  authors: [{ name: "Shakya Bhattacharyya" }],
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
     apple: '/icon.svg',
   },
   openGraph: {
-    title: "Shakyadeep Bhattacharyya | Data Scientist",
-    description: "Turning analytics into measurable growth",
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shakyadeep Bhattacharyya | Data Scientist",
-    description: "From data chaos to business clarity",
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
   },
   robots: {
     index: true,
@@ -70,7 +81,6 @@ export default function RootLayout({
             data-cf-beacon={`{"token": "${cfToken}"}`}
           />
         )}
-        {/* Uncomment to enable Google Analytics */}
         {gaId && (
           <>
             <Script

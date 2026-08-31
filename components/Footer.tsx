@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-foreground">.data</span>
             </Link>
             <p className="text-foreground/60 text-sm">
-              Turning data chaos into business clarity.
+              Data Scientist · Decision Science &amp; Production ML
             </p>
           </div>
 

@@ -1,70 +1,67 @@
 [
   {
+    "id": "rock-emergency",
+    "company": "Rock Emergency Services",
+    "role": "Data Scientist - AI Systems & Decision Intelligence",
+    "department": "Production Decision Systems",
+    "type": "Professional",
+    "startDate": "Feb 2026",
+    "endDate": "Present",
+    "logo": "/images/EDIT_ME/logo-rock.png",
+    "description": "Production decision-intelligence systems connecting Python/SQL models to operational actions.",
+    "highlights": [
+      "1,679 operational projects representing ~$22M estimated revenue",
+      "50%+ reconciliation-effort reduction; key signal latency under 5 minutes",
+      "414 targeted alerts, 171 automated workflows, governed agent/LLM workflows",
+      "~$25K/month PROJECTED SAVINGS (projected, not realized)"
+    ]
+  },
+  {
     "id": "simon-gta",
     "company": "University of Rochester – Simon Business School",
-    "role": "Graduate Teaching Assistant (Analytics)",
-    "department": "MS in Business Analytics Program",
+    "role": "Instructional Analytics Associate - Analytics Design & Application",
+    "department": "M.S. Business Analytics Program",
     "type": "Professional / Academic",
     "startDate": "Jan 2025",
-    "endDate": "Present",
+    "endDate": "Dec 2025",
     "logo": "/images/EDIT_ME/logo-simon.png",
-    "description": "Supported core analytics coursework for 100+ MSBA students through teaching, mentoring, and evaluation.",
+    "description": "Python / SQL / ML / BI labs and reproducible analytics instruction for graduate students.",
     "highlights": [
-      "Boosted student performance by 30% via SQL, Python, and pandas tutoring",
-      "Led 3+ review sessions on pricing analytics, elasticity, and game theory",
-      "Resolved 10+ weekly technical queries in Python and SQL",
-      "Graded 100+ submissions ensuring fair and consistent evaluation"
+      "Labs for 100+ graduate students in Python, SQL, ML, and BI",
+      "Reproducible analysis and grading / feedback automation",
+      "Approximately 70% reduction in evaluation time"
     ]
   },
   {
     "id": "simon-vision",
     "company": "Simon Vision Consulting",
-    "role": "Data Analytics Consultant",
-    "department": "University of Rochester",
+    "role": "Data Science Analyst - Client Engagement: City of Rochester",
+    "department": "Client Engagement",
     "type": "Consulting",
-    "startDate": "Oct 2024",
+    "startDate": "Sep 2024",
     "endDate": "Dec 2024",
     "logo": "/images/EDIT_ME/logo-simon-vision.png",
-    "description": "Consulted for nonprofits & SMBs on data strategy and forecasting",
+    "description": "Classification, experimentation, and uplift modeling for City of Rochester decision support.",
     "highlights": [
-      "Consulted for nonprofits & SMBs on data strategy & forecasting",
-      "Delivered insights that reduced churn & improved fundraising efficiency by 15%",
-      "Designed pricing experiments and causal inference frameworks",
-      "Presented actionable recommendations to C-suite executives"
+      "Classification and uplift modeling on 5,000+ survey responses (+0.07 AUC)",
+      "A/B testing and resource-allocation decision support",
+      "Power BI / SQL reporting with ~50% reporting-effort reduction"
     ]
   },
   {
     "id": "cognizant",
     "company": "Cognizant Technology Solutions",
-    "role": "Data Analyst",
-    "department": "Enterprise Solutions Division",
+    "role": "Junior Software Engineer | Data Analytics & Machine Learning",
+    "department": "Enterprise Analytics & Machine Learning",
     "type": "Professional",
     "startDate": "Feb 2022",
     "endDate": "Jun 2024",
     "logo": "/images/EDIT_ME/logo-cognizant.png",
-    "description": "Delivered data-automation solutions and KPI dashboards for enterprise clients",
+    "description": "Progressed from Intern | Data & Analytics → Analytics & Machine Learning Associate (functional descriptor) → Junior Software Engineer | Data Analytics & Machine Learning.",
     "highlights": [
-      "Delivered data-automation solutions cutting manual effort by 35%",
-      "Built KPI dashboards for operational metrics in Tableau & Power BI",
-      "Partnered with cross-functional teams on pricing & efficiency analytics",
-      "Managed stakeholder communication for 5+ concurrent analytics projects"
-    ]
-  },
-  {
-    "id": "iem-research",
-    "company": "Institute of Engineering & Management (IEM)",
-    "role": "Research Associate",
-    "department": "Machine Learning Lab",
-    "type": "Professional / Academic",
-    "startDate": "Feb 2019",
-    "endDate": "Dec 2021",
-    "logo": "/images/EDIT_ME/logo-iem.png",
-    "description": "Co-developed predictive models on student retention and academic performance",
-    "highlights": [
-      "Co-developed predictive models on student retention & academic performance",
-      "Published internal white paper on AI-driven curriculum analysis",
-      "Mentored undergraduate students on ML projects",
-      "Built data pipelines for academic research data collection"
+      "XGBoost, regression, forecasting, classification on 250K+ clinical-trial and TB-scale enterprise data",
+      "SQL ETL, feature engineering, batch scoring; ~90% reporting-cycle reduction",
+      "TensorFlow model improving detection precision by 12%; work supporting $30M+ cost avoidance"
     ]
   }
 ]
