@@ -26,6 +26,7 @@ type ExperienceItem = {
   dates: string;
   headline: string;
   progressionNote?: string;
+  discreetClarification?: string;
   bullets?: string[];
   subroles?: Subrole[];
   keySkills: string[];
@@ -52,15 +53,11 @@ export default function Experience() {
           <h1 className="text-5xl lg:text-7xl font-bold mb-4">
             Professional <span className="gradient-text">Experience</span>
           </h1>
-          <p className="text-xl text-foreground/80 mb-4 max-w-3xl mx-auto">
-            From Computer Science foundations through Cognizant enterprise
-            analytics/ML progression and Simon decision science, into production
-            Data Scientist work.
-          </p>
-          <p className="text-sm text-foreground/60 mb-8 max-w-2xl mx-auto">
-            Titles reflect verified roles and functional public-facing descriptors.
-            Seniority is not inflated. Cognizant middle-stage wording is a
-            functional descriptor of the work — not a fabricated HR title.
+          <p className="text-xl text-foreground/80 mb-8 max-w-3xl mx-auto">
+            My experience spans enterprise analytics and machine learning,
+            graduate decision science, and production Data Science — with
+            increasing responsibility for turning models and operational data into
+            measurable decisions.
           </p>
 
           <a
@@ -170,9 +167,9 @@ export default function Experience() {
                         className="border-t border-border"
                       >
                         <div className="p-6 space-y-6">
-                          {exp.progressionNote && (
-                            <p className="text-sm text-foreground/60 border border-border rounded-lg p-3 bg-background">
-                              {exp.progressionNote}
+                          {exp.discreetClarification && (
+                            <p className="text-xs text-foreground/50 italic">
+                              *{exp.discreetClarification}
                             </p>
                           )}
 
@@ -198,11 +195,6 @@ export default function Experience() {
                                       {subrole.dates}
                                     </span>
                                   </div>
-                                  {subrole.titleNote && (
-                                    <p className="text-xs text-foreground/50 mb-3 italic">
-                                      {subrole.titleNote}
-                                    </p>
-                                  )}
                                   <ul className="space-y-2">
                                     {subrole.bullets.map((bullet, bIdx) => (
                                       <li

@@ -44,13 +44,9 @@ export default function Projects() {
             Technical <span className="gradient-text">Proof</span>
           </h1>
           <p className="text-xl text-foreground/80 mb-3 max-w-3xl">
-            Organized by what gets solved — production decision systems,
-            analytics, cost-aware fraud decisioning, applied ML, and AI systems.
-          </p>
-          <p className="text-sm text-foreground/60 max-w-3xl">
-            Source labels (Academic, Professional, Consulting, Simulation) remain
-            as secondary metadata. Simulated and projected outcomes are labeled
-            explicitly.
+            Selected work across production decision analytics, applied ML and
+            experimentation, and governed AI systems — organized by the problems
+            being solved rather than by résumé category.
           </p>
         </motion.div>
 

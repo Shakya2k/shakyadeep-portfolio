@@ -43,7 +43,7 @@ const skillGroups = [
     ],
   },
   {
-    title: "Systems & Supporting Edge",
+    title: "Systems & Applied AI",
     items: [
       "AWS",
       "Azure",
@@ -139,11 +139,11 @@ export default function Home() {
             className="space-y-4"
           >
             <h2 className="text-lg font-mono text-primary mb-2">
-              Defensible proof signals
+              Production scope &amp; impact
             </h2>
             <p className="text-sm text-foreground/60 mb-4">
-              Selected production metrics from Rock Emergency Services. Projected
-              figures are labeled as such elsewhere on the site.
+              Selected metrics from production decision-intelligence work at Rock
+              Emergency Services.
             </p>
             {proofSignals.map((signal) => (
               <div
@@ -172,10 +172,10 @@ export default function Home() {
             Career <span className="text-primary">arc</span>
           </h2>
           <p className="text-foreground/70 mb-8 max-w-3xl">
-            Computer Science foundation → Cognizant enterprise analytics / ML
-            progression → M.S. Business Analytics / decision science → production
-            Data Scientist. Analytics and ML experience began at Cognizant — well
-            before the formal Data Scientist title at Rock.
+            My path combines a computer-science foundation, enterprise analytics
+            and machine learning at Cognizant, graduate decision science at Simon
+            Business School, and current production Data Science work at Rock
+            Emergency Services.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[
@@ -216,11 +216,12 @@ export default function Home() {
           transition={{ duration: 0.45 }}
         >
           <h2 className="text-3xl font-bold mb-2 font-mono">
-            Skills <span className="text-secondary">hierarchy</span>
+            Technical <span className="text-secondary">toolkit</span>
           </h2>
           <p className="text-foreground/60 mb-8">
-            Data Science first. AI systems are a supporting edge — not the lead
-            identity.
+            Core data-science methods, production systems, and applied AI
+            capabilities used across modeling, experimentation, forecasting, and
+            operational decision workflows.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {skillGroups.map((group) => (

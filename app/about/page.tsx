@@ -94,15 +94,17 @@ export default function About() {
           className="bg-card border border-border rounded-lg p-8 mb-12"
         >
           <p className="text-2xl text-foreground/90 leading-relaxed mb-6">
-            I&apos;m a Data Scientist focused on the layer between predictive
-            models and real operational decisions — Decision Science &amp;
-            Production ML.
+            I&apos;m a Data Scientist focused on turning predictive signals into
+            reliable operational decisions.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-            My work combines Python, SQL, machine learning, forecasting,
-            experimentation, and production data systems to turn complex
-            operational data into measurable actions. AI systems are a supporting
-            edge, not the whole identity.
+            My work spans decision science, production ML, forecasting,
+            experimentation, anomaly detection, and production data systems,
+            primarily using Python and SQL.
+          </p>
+          <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+            I also build governed LLM and agent workflows when they make
+            analytical systems easier to use, monitor, and act on in production.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed">
             Outside work I love cooking fusion food, exploring mountain towns,
