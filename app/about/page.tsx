@@ -94,18 +94,22 @@ export default function About() {
           className="bg-card border border-border rounded-lg p-8 mb-12"
         >
           <p className="text-2xl text-foreground/90 leading-relaxed mb-6">
-            I'm a data scientist and pricing strategist who finds order in chaos
-            and patterns in numbers.
+            I&apos;m a Data Scientist focused on turning predictive signals into
+            reliable operational decisions.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-            Outside work I love cooking fusion food, exploring mountain towns,
-            and tinkering with AI tools. Whether it's optimizing a pricing model
-            or perfecting a recipe, I approach challenges with curiosity and
-            precision.
+            My work spans decision science, production ML, forecasting,
+            experimentation, anomaly detection, and production data systems,
+            primarily using Python and SQL.
+          </p>
+          <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+            I also build governed LLM and agent workflows when they make
+            analytical systems easier to use, monitor, and act on in production.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            I believe analytics should drive clarity, not complexity. That's how
-            I turn data into decisions that actually move the needle.
+            Outside work I love cooking fusion food, exploring mountain towns,
+            and tinkering with tools — approaching both recipes and models with
+            curiosity and precision.
           </p>
         </motion.div>
 

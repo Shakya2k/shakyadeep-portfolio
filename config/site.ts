@@ -10,6 +10,11 @@ export const FEATURES = {
 };
 
 export const SITE_CONFIG = {
-  title: "Shakyadeep Bhattacharyya | Data Scientist & Analytics Professional",
-  description: "From data chaos to business clarity. Turning analytics into measurable growth.",
+  title: "Shakya Bhattacharyya | Data Scientist, Decision Science & Production ML",
+  description:
+    "Data Scientist building production decision systems with Python, SQL, machine learning, forecasting, experimentation and operational analytics.",
+  role: "Data Scientist",
+  differentiation: "Decision Science & Production ML",
+  capabilities:
+    "Experimentation • Forecasting • Applied ML • Operational Decision Systems • Applied AI",
 };

@@ -3,72 +3,110 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  TrendingUp,
-  Target,
-  Zap,
-  Award,
-  ArrowRight,
-} from "lucide-react";
-import KPICard from "@/components/KPICard";
-import CountUp from "@/components/CountUp";
-import SkillBar from "@/components/SkillBar";
+import { ArrowRight } from "lucide-react";
+
+const proofSignals = [
+  {
+    label: "Operational projects in production systems",
+    value: "1,679",
+    note: "Rock Emergency Services",
+  },
+  {
+    label: "Estimated revenue represented",
+    value: "~$22M",
+    note: "Across those operational projects",
+  },
+  {
+    label: "Reconciliation-effort reduction",
+    value: "50%+",
+    note: "With key signal latency under 5 minutes",
+  },
+];
+
+const skillGroups = [
+  {
+    title: "Data Science Core",
+    items: [
+      "Data Science",
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Statistical Modeling",
+      "Predictive Modeling",
+      "Experimentation",
+      "Forecasting",
+      "scikit-learn",
+      "XGBoost",
+      "Data Analysis",
+      "Tableau",
+      "Power BI",
+    ],
+  },
+  {
+    title: "Systems & Applied AI",
+    items: [
+      "AWS",
+      "Azure",
+      "Data Engineering",
+      "FastAPI",
+      "MLflow",
+      "LLM Systems",
+      "Agent Workflows",
+      "Java",
+      "React",
+    ],
+  },
+];
 
 export default function Home() {
-  const skills = [
-    { name: "Python", years: 7, color: "#4ade80" },
-    { name: "SQL", years: 7, color: "#60a5fa" },
-    { name: "Excel", years: 7, color: "#9b5de5" },
-    { name: "Statistics & Experimentation", years: 5, color: "#4ade80" },
-    { name: "Business Strategy", years: 4, color: "#60a5fa" },
-    { name: "Data Storytelling", years: 4, color: "#9b5de5" },
-    { name: "Machine Learning", years: 4, color: "#4ade80" },
-    { name: "Tableau", years: 3, color: "#60a5fa" },
-    { name: "Power BI", years: 1, color: "#9b5de5" },
-    { name: "Pricing Analytics", years: 1, color: "#4ade80" },
-  ];
-
   return (
     <div className="pt-20">
-      {/* Hero Section - Tableau Dashboard Style */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Photo & Headline */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
             className="text-center lg:text-left"
           >
-            <div className="relative w-64 h-64 mx-auto lg:mx-0 mb-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-full blur-2xl opacity-30 animate-pulse"></div>
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary">
-                {/* EDIT_ME: Replace with actual photo */}
+            <div className="relative w-56 h-56 mx-auto lg:mx-0 mb-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/20 rounded-full blur-2xl opacity-40" />
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/80">
                 <Image
                   src="/images/EDIT_ME/profile.jpg"
-                  alt="Shakyadeep Bhattacharyya"
+                  alt="Shakya Bhattacharyya, Data Scientist"
                   fill
-                  sizes="256px"
+                  sizes="224px"
                   className="object-cover"
                   priority
                 />
               </div>
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-bold mb-4 leading-tight">
-              From <span className="gradient-text">data chaos</span>
-              <br />
-              to business clarity.
-            </h1>
-
-            <p className="text-xl text-foreground/80 mb-8">
-              Turning analytics into measurable growth.
+            <p className="text-sm font-mono uppercase tracking-widest text-primary mb-3">
+              Data Scientist · Decision Science & Production ML
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-5 leading-tight">
+              Data Scientist building systems that turn{" "}
+              <span className="gradient-text">predictions into decisions.</span>
+            </h1>
+
+            <p className="text-lg lg:text-xl text-foreground/80 mb-4 max-w-xl mx-auto lg:mx-0">
+              I work across decision science, production ML, forecasting,
+              experimentation, anomaly detection, and governed AI systems —
+              connecting Python/SQL models to real operational actions.
+            </p>
+
+            <p className="text-sm text-foreground/60 mb-8 font-mono">
+              Experimentation · Forecasting · Applied ML · Operational Decision
+              Systems · Applied AI
+            </p>
+
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <Link
                 href="/projects"
-                className="px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-all hover:scale-105"
+                className="px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-all"
               >
                 View Projects
               </Link>
@@ -78,251 +116,200 @@ export default function Home() {
               >
                 Experience
               </Link>
-              <Link
-                href="/about"
+              <a
+                href="/Shakyadeep_Bhattacharyya_Resume.pdf"
+                download
                 className="px-6 py-3 border border-border text-foreground font-semibold rounded-lg hover:bg-card transition-all"
               >
-                About Me
-              </Link>
+                Download Resume
+              </a>
               <Link
                 href="/contact"
                 className="px-6 py-3 border border-border text-foreground font-semibold rounded-lg hover:bg-card transition-all"
               >
-                Contact Me
+                Contact
               </Link>
             </div>
           </motion.div>
 
-          {/* Right: KPI Dashboard */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.1 }}
             className="space-y-4"
           >
-            <h2 className="text-2xl font-bold mb-6 font-mono text-primary">
-              Key Performance Indicators
+            <h2 className="text-lg font-mono text-primary mb-2">
+              Production scope &amp; impact
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <KPICard
-                title="Revenue Impact"
-                value={
-                  <>
-                    $<CountUp end={3.2} decimals={1} />M+
-                  </>
-                }
-                icon={<TrendingUp size={32} />}
-                delay={0}
-              />
-              <KPICard
-                title="Projects Delivered"
-                value={
-                  <>
-                    <CountUp end={25} />+
-                  </>
-                }
-                icon={<Target size={32} />}
-                delay={0.1}
-              />
-              <KPICard
-                title="Pipelines Automated"
-                value={<CountUp end={17} />}
-                icon={<Zap size={32} />}
-                delay={0.2}
-              />
-              <KPICard
-                title="Stakeholder NPS"
-                value={
-                  <>
-                    <CountUp end={9.4} decimals={1} />
-                    /10
-                  </>
-                }
-                icon={<Award size={32} />}
-                delay={0.3}
-              />
-            </div>
+            <p className="text-sm text-foreground/60 mb-4">
+              Selected metrics from production decision-intelligence work at Rock
+              Emergency Services.
+            </p>
+            {proofSignals.map((signal) => (
+              <div
+                key={signal.label}
+                className="bg-card border border-border rounded-lg p-5 hover:border-primary/40 transition-colors"
+              >
+                <div className="text-3xl font-bold font-mono text-primary mb-1">
+                  {signal.value}
+                </div>
+                <div className="font-medium text-foreground">{signal.label}</div>
+                <div className="text-sm text-foreground/60 mt-1">{signal.note}</div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Core Competencies */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-12">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center lg:text-left"
+          transition={{ duration: 0.45 }}
         >
           <h2 className="text-3xl font-bold mb-2 font-mono">
-            Core <span className="text-primary">Competencies</span>
+            Career <span className="text-primary">arc</span>
           </h2>
-          <p className="text-foreground/60 mb-8">
-            Technical and analytical skills honed through real-world impact
+          <p className="text-foreground/70 mb-8 max-w-3xl">
+            My path combines a computer-science foundation, enterprise analytics
+            and machine learning at Cognizant, graduate decision science at Simon
+            Business School, and current production Data Science work at Rock
+            Emergency Services.
           </p>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-card border border-border rounded-lg p-8">
-              {skills.map((skill) => (
-                <SkillBar
-                  key={skill.name}
-                  skill={skill.name}
-                  years={skill.years}
-                  color={skill.color}
-                />
-              ))}
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all group">
-                <h3 className="text-xl font-semibold mb-3 text-primary">
-                  Technical Stack
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Python (pandas, NumPy, scikit-learn, matplotlib)",
-                    "SQL",
-                    "Excel",
-                    "Tableau",
-                    "Power BI",
-                    "Snowflake",
-                    "Azure Data Factory",
-                    "Git",
-                    "APIs",
-                    "Streamlit",
-                    "MLflow",
-                    "NLP",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-background text-sm rounded-full border border-primary/30 text-foreground/80 hover:border-primary hover:shadow-[0_0_10px_rgba(74,222,128,0.3)] transition-all cursor-default"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {[
+              {
+                t: "CS foundation",
+                d: "B.Tech CSE · MAKAUT (IEM)",
+              },
+              {
+                t: "Enterprise analytics / ML",
+                d: "Cognizant progression into Jr. Software Engineer | Data Analytics & ML",
+              },
+              {
+                t: "Decision science",
+                d: "M.S. Business Analytics · Simon · GPA 3.9",
+              },
+              {
+                t: "Production DS",
+                d: "Rock · Decision Intelligence systems",
+              },
+            ].map((step) => (
+              <div
+                key={step.t}
+                className="border border-border rounded-lg p-4 bg-card"
+              >
+                <h3 className="font-semibold text-primary mb-2">{step.t}</h3>
+                <p className="text-sm text-foreground/70">{step.d}</p>
               </div>
-
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-secondary/50 transition-all group">
-                <h3 className="text-xl font-semibold mb-3 text-secondary">
-                  Domain Expertise
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Pricing & Revenue Optimization",
-                    "Marketing & Customer Analytics",
-                    "Financial Forecasting",
-                    "Product Experimentation",
-                    "Risk Analytics",
-                    "Data Engineering",
-                    "Business Intelligence",
-                    "ETL Pipelines",
-                  ].map((domain) => (
-                    <span
-                      key={domain}
-                      className="px-3 py-1 bg-background text-sm rounded-full border border-secondary/30 text-foreground/80 hover:border-secondary hover:shadow-[0_0_10px_rgba(96,165,250,0.3)] transition-all cursor-default"
-                    >
-                      {domain}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-all group">
-                <h3 className="text-xl font-semibold mb-3 text-accent">
-                  Soft Skills
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Analytical Storytelling",
-                    "Stakeholder Communication",
-                    "Leadership",
-                    "Problem Solving",
-                    "Teaching & Mentoring",
-                    "Time Management",
-                    "Cross-Functional Collaboration",
-                  ].map((soft) => (
-                    <span
-                      key={soft}
-                      className="px-3 py-1 bg-background text-sm rounded-full border border-accent/30 text-foreground/80 hover:border-accent hover:shadow-[0_0_10px_rgba(155,93,229,0.3)] transition-all cursor-default"
-                    >
-                      {soft}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </motion.div>
       </section>
 
-      {/* Education */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-12">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center lg:text-left"
+          transition={{ duration: 0.45 }}
+        >
+          <h2 className="text-3xl font-bold mb-2 font-mono">
+            Technical <span className="text-secondary">toolkit</span>
+          </h2>
+          <p className="text-foreground/60 mb-8">
+            Core data-science methods, production systems, and applied AI
+            capabilities used across modeling, experimentation, forecasting, and
+            operational decision workflows.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {skillGroups.map((group) => (
+              <div
+                key={group.title}
+                className="bg-card border border-border rounded-lg p-6"
+              >
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  {group.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="px-3 py-1 bg-background text-sm rounded border border-border text-foreground/80"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      <section className="container mx-auto px-6 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
         >
           <h2 className="text-3xl font-bold mb-8 font-mono">
             <span className="text-secondary">Education</span>
           </h2>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-secondary/50 transition-all">
+            <div className="bg-card border border-border rounded-lg p-6">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-background border border-border rounded-lg flex items-center justify-center flex-shrink-0 p-2">
                   <Image
                     src="/images/EDIT_ME/logo-simon.png"
-                    alt="Simon Business School"
+                    alt="Simon Business School logo"
                     width={60}
                     height={60}
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    M.S. Business Analytics
+                  <h3 className="text-xl font-semibold mb-1">
+                    M.S. Business Analytics (STEM)
                   </h3>
                   <p className="text-secondary font-medium mb-2">
-                    Simon Business School, University of Rochester
+                    University of Rochester · Simon Business School
+                  </p>
+                  <p className="text-foreground/60 text-sm">Jul 2024 – Dec 2025</p>
+                  <p className="text-foreground/60 text-sm">
+                    GPA 3.9 / 4.0 · Dean&apos;s List · Merit Scholarship
                   </p>
                   <p className="text-foreground/60 text-sm">
-                    3.9 GPA • Dean's List
-                  </p>
-                  <p className="text-foreground/60 text-sm">
-                    Advanced Certificate in Pricing
+                    Advanced Certificate in Pricing Analytics
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all">
+            <div className="bg-card border border-border rounded-lg p-6">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-background border border-border rounded-lg flex items-center justify-center flex-shrink-0 p-2">
                   <Image
                     src="/images/EDIT_ME/logo-iem.png"
-                    alt="IEM Kolkata"
+                    alt="MAKAUT / IEM logo"
                     width={60}
                     height={60}
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    B.Tech Computer Science
+                  <h3 className="text-xl font-semibold mb-1">
+                    B.Tech Computer Science & Engineering
                   </h3>
                   <p className="text-primary font-medium mb-2">
-                    Institute of Engineering & Management (IEM), Kolkata
+                    Maulana Abul Kalam Azad University of Technology (MAKAUT)
                   </p>
                   <p className="text-foreground/60 text-sm">
-                    Computer Science & Engineering
+                    College: Institute of Engineering & Management (IEM), Kolkata
                   </p>
-                  <p className="text-foreground/60 text-sm">
-                    Director's Award for Outstanding Performance
-                  </p>
+                  <p className="text-foreground/60 text-sm">Aug 2018 – Jun 2022</p>
                 </div>
               </div>
             </div>
@@ -330,28 +317,27 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Summary CTA */}
       <section className="container mx-auto px-6 py-16">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 border border-primary/30 rounded-2xl p-12 text-center"
+          transition={{ duration: 0.45 }}
+          className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 border border-primary/30 rounded-2xl p-10 text-center"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            I turn messy data into actionable insights that help businesses
-            <br />
-            <span className="gradient-text">
-              cut costs, grow revenue, and make smarter decisions, FAST.
-            </span>
+          <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+            Inspectable technical proof in{" "}
+            <span className="gradient-text">Decision Science & Production ML</span>
           </h2>
-
+          <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
+            Browse professional, consulting, and academic projects organized by
+            problem area — with simulated and projected outcomes labeled.
+          </p>
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-all hover:scale-105 text-lg"
+            href="/projects"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-all text-lg"
           >
-            Let's Work Together
+            View Projects
             <ArrowRight size={20} />
           </Link>
         </motion.div>

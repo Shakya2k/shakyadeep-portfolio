@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Question to agent to validation to human approval to logged action">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg2)"/>
+  <text x="60" y="70" fill="#86efac" font-family="ui-sans-serif, system-ui" font-size="28" font-weight="600">Governed AI Workflows</text>
+  <text x="60" y="110" fill="#94a3b8" font-family="ui-sans-serif, system-ui" font-size="18">Signal ’ agent/tool ’ validation ’ human approval ’ logged action</text>
+
+  <g font-family="ui-sans-serif, system-ui" font-size="16" fill="#e2e8f0">
+    <rect x="40" y="220" width="190" height="100" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="135" y="265" text-anchor="middle">Question /</text>
+    <text x="135" y="290" text-anchor="middle">signal</text>
+
+    <polygon points="240,262 255,270 240,278" fill="#60a5fa"/>
+
+    <rect x="265" y="220" width="190" height="100" rx="12" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+    <text x="360" y="265" text-anchor="middle">Agent /</text>
+    <text x="360" y="290" text-anchor="middle">tool call</text>
+
+    <polygon points="465,262 480,270 465,278" fill="#60a5fa"/>
+
+    <rect x="490" y="220" width="190" height="100" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="585" y="265" text-anchor="middle">Validation</text>
+    <text x="585" y="290" text-anchor="middle">gates</text>
+
+    <polygon points="690,262 705,270 690,278" fill="#60a5fa"/>
+
+    <rect x="715" y="220" width="200" height="100" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <text x="815" y="265" text-anchor="middle">Human</text>
+    <text x="815" y="290" text-anchor="middle">approval</text>
+
+    <polygon points="925,262 940,270 925,278" fill="#60a5fa"/>
+
+    <rect x="950" y="220" width="210" height="100" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="1055" y="265" text-anchor="middle">Logged</text>
+    <text x="1055" y="290" text-anchor="middle">action</text>
+  </g>
+
+  <text x="60" y="420" fill="#64748b" font-family="ui-sans-serif, system-ui" font-size="16">Governance-first conceptual flow  auditable actions, not autonomous claims</text>
+</svg>
