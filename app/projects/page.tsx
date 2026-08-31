@@ -17,19 +17,19 @@ const PROBLEM_AREAS = [
 type Project = (typeof projectsData)[number] & {
   problemArea?: string;
   evidenceLabel?: string;
+  featured?: boolean;
 };
 
 export default function Projects() {
   const [selectedArea, setSelectedArea] = useState<string>("All");
   const projects = projectsData as Project[];
 
-  const filteredProjects = useMemo(
-    () =>
-      selectedArea === "All"
-        ? projects
-        : projects.filter((p) => p.problemArea === selectedArea),
-    [projects, selectedArea]
-  );
+  const filteredProjects = useMemo(() => {
+    const visible = projects.filter((p) => p.featured !== false);
+    return selectedArea === "All"
+      ? visible
+      : visible.filter((p) => p.problemArea === selectedArea);
+  }, [projects, selectedArea]);
 
   return (
     <div className="pt-20 min-h-screen">
